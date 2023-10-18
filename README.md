@@ -10,8 +10,8 @@
 - Luciano Amado
 - Bruno Gorosito
 - Luciana Maud
-- Marcos Reyes
 - Andrea Pereyra
+- Marcos Reyes
 - Roman Ruiz
 - Agustin Santillan
 
