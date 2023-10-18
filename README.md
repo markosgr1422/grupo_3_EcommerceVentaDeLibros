@@ -7,7 +7,12 @@
 
 ### Nuestro equipo esta conformado por:
 
-Agustin Santillan, Bruno Gorosito, Luciano Amado, Luciana Maud Marcos Reyes, Roman Ruiz, Andrea Pereyra
+- Luciano Amado
+- Bruno Gorosito
+- Luciana Maud Marcos Reyes
+- Andrea Pereyra
+- Roman Ruiz
+- Agustin Santillan
 
 ### Referencia o inspiraion de nuestro producto
 
