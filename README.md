@@ -1,28 +1,19 @@
-# grupo_3_EcommerceVentaDeLibros
+# Grupo 3: Ecommerce de venta de libros
 
-Oferta: Tienda online especializada en libros de todo género, que comprenda las necesidades y preferencias del público objetivo, para brindarles productos que les resulten interesantes y útiles, desde un texto académico hasta una novela de ficción.
+ Plataforma online especializada en venta de libros de todos los género, que busca expandir  las necesidades y preferencias del nuestro público, para brindarles una mejor experiencia en la lectura con nuestro productos de muy buena calidad y precio. 
 
-Público objetivo: Personas que disfrutan de la lectura por placer, estudiantes interesados en el desarrollo académico, profesionales que desean ampliar su campo profesional, y porque no, alguien que busca hacer un regalo original.
+ ### Público objetivo:
+ Personas que disfrutan de la lectura por placer, estudiantes interesados en el desarrollo académico, profesionales que desean ampliar su campo profesional, y porque no, alguien que busca hacer un regalo original.
 
+### Nuestro equipo esta conformado por:
 
-nuestro equipo se conforma por:
-Agustin Santillan 
-Bruno Gorosito
-Luciana Maud
-Luciano Amado
-Marcos Reyes
-Roman Ruiz
-Andrea Pereyra
+Agustin Santillan, Bruno Gorosito, Luciano Amado, Luciana Maud Marcos Reyes, Roman Ruiz, Andrea Pereyra
 
+### Referencia o inspiraion de nuestro producto
 
-https://www.unioneditorial.net/
-
-https://www.buscalibre.com.ar/?bmkt_source=google&bmkt_campaign=970424794&gclid=CjwKCAjwvrOpBhBdEiwAR58-3AWa2tKRRuSMoY0H7-Oh7ci4YnB3kmlQ9P5NANESUlOjmkcCaoc-dxoCY8cQAvD_BwE
-
-https://www.yenny-elateneo.com/
-
-https://cuspide.com/
-
-https://libreriaaguilar.com.ar/
-
-https://www.librenta.com/
+- https://www.unioneditorial.net/
+- https://www.buscalibre.com.ar/
+- https://www.yenny-elateneo.com/
+- https://cuspide.com/
+- https://libreriaaguilar.com.ar/
+- https://www.librenta.com/
