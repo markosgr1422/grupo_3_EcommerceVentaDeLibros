@@ -17,3 +17,5 @@ Agustin Santillan, Bruno Gorosito, Luciano Amado, Luciana Maud Marcos Reyes, Rom
 - https://cuspide.com/
 - https://libreriaaguilar.com.ar/
 - https://www.librenta.com/
+
+Hicimos esta selección de referencias como una manera de inspiración ya que los sitios elegidos tienen una misma estética, presentando un diseño intuitivo y atractivo que facilita la navegación del usuario, con una interfaz fácil de usar y accesible en diferentes dispositivos (celulares, tablets, computadoras, etc). Poseen una amplia selección de productos relacionados con libros y literatura y se dirigen al público deseado para el e-commerce requerido en este caso, finalmente poseen un proceso de compra sencillo, intuitivo y seguro.
