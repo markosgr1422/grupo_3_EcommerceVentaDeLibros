@@ -8,7 +8,7 @@
 ### Nuestro equipo esta conformado por:
 
 - Luciano Amado
-- Bruno Gorosito
+- Bruno Gorosito: Tengo 23 años, soy de Sgo del Estero. Estoy estudiando programación en el ITSE y en paralelo aprendo Desarrollo web (back-end y front-end) de forma autodidacta.
 - Luciana Maud
 - Andrea Pereyra
 - Marcos Reyes
