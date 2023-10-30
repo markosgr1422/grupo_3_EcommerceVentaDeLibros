@@ -11,7 +11,7 @@
 - Bruno Gorosito: Tengo 23 años, soy de Sgo del Estero. Estoy estudiando programación en el ITSE y en paralelo aprendo Desarrollo web (back-end y front-end) de forma autodidacta.
 - Luciana Maud
 - Andrea Pereyra
-- Marcos Reyes
+- Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
 - Roman Ruiz
 - Agustin Santillan
 
