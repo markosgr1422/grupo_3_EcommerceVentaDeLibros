@@ -13,7 +13,7 @@
 - Andrea Pereyra
 - Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
 - Roman Ruiz
-- Agustin Santillan
+- Agustin Santillan: Tengo 37 años. Santiagueño. Licenciado en Ciencias Politicas e iniciandose en el mundo de la Programacion!!!
 
 ### Referencia o inspiraion de nuestro producto
 
