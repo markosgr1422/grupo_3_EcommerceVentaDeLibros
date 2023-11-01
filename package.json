@@ -1,0 +1,14 @@
+{
+  "name": "grupo_3_ecommerceventadelibros",
+  "version": "1.0.0",
+  "description": "Plataforma online especializada en venta de libros de todos los género, que busca expandir  las necesidades y preferencias del nuestro público, para brindarles una mejor experiencia en la lectura con nuestro productos de muy buena calidad y precio.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
