@@ -12,7 +12,7 @@
 - Luciana Maud
 - Andrea Pereyra
 - Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
-- Roman Ruiz
+- Roman Ruiz: Tengo 32 años, soy de Santiago del Estero. Contador Público y dueño de comercio. Me estoy iniciando en este mundillo de la programación buscando potenciar mis habilidades y recursos.
 - Agustin Santillan: Tengo 37 años. Santiagueño. Licenciado en Ciencias Politicas e iniciandose en el mundo de la Programacion!!!
 
 ### Referencia o inspiraion de nuestro producto
