@@ -9,7 +9,7 @@
 
 - Luciano Amado
 - Bruno Gorosito: Tengo 23 años, soy de Sgo del Estero. Estoy estudiando programación en el ITSE y en paralelo aprendo Desarrollo web (back-end y front-end) de forma autodidacta.
-- Luciana Maud
+- Luciana Maud: Tengo 21 años, soy de Sgo del Estero. Soy estudiante de Licenciatura en Psicología.
 - Andrea Pereyra
 - Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
 - Roman Ruiz: Tengo 32 años, soy de Santiago del Estero. Contador Público y dueño de comercio. Me estoy iniciando en este mundillo de la programación buscando potenciar mis habilidades y recursos.
