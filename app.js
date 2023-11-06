@@ -14,6 +14,10 @@ app.get("/", (req, res)=>{
     res.sendFile(__dirname + "/views/home.html");
 });
 
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
+
 app.listen(1422, () =>{
     console.log("Server UP");
 })

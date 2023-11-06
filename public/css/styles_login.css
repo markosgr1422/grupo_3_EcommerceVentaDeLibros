@@ -1,0 +1,97 @@
+/*COLOR: #23BFF2*/
+/*FONT: POPPINS*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.formulario{
+    background-color: white;
+    margin-top: 150px;
+    padding: 3px;
+}
+h1{
+    text-align: center;
+    color: #23BFF2;
+    font-size: 40px;
+}
+input[type="email"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+input[type="checkbox"]{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999
+}
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background-color: #23BFF2;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: lightskyblue;
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: #23BFF2;
+    font-weight: 600;
+}
+.link:hover{
+    color: lightskyblue
+}
+
+input:invalid {
+    background-color: #f7adad2e;
+}
+.error-message {
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
+}
+  input:invalid + .error-message {
+    display: block;
+}
+  
+/*MEDIA QUERIES*/
+@media(min-width:992px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
+
