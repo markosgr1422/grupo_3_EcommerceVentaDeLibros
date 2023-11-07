@@ -1,0 +1,57 @@
+*{
+    padding: auto;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+
+
+
+header.desk{
+    width: 14rem;
+    display: flex;
+    background-color: #23bff2;
+    height: 4rem;
+}
+
+
+
+
+h1{
+    align-items: 0;
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    align-content: center;
+  }
+  
+  h3{
+    align-content: center;
+    background-color: gainsboro;
+    border-block-end-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  h2{
+    align-items: 0;
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around
+  
+  }
+  
+  h6{
+    list-style-position: back;
+    background-color: gainsboro;
+  }
+
+  .img-logo{
+    max-width: fit-content;
+  }
+  .img-icon{
+    max-width: fit-content;
+  }
