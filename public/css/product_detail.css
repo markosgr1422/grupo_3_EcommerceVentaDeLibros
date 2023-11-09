@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5; /* Fondo de la página */
+    color: #333; /* Color de texto predeterminado */
+}
+
+.product-details {
+    text-align: left; /* Alineación del contenido a la izquierda */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde alrededor de los detalles del libro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo de los detalles del libro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    color: #333;
+    font-size: 24px; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Margen inferior para separar del contenido */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .product-details {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}
