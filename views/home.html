@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/home.css">
+  <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,21 +15,21 @@
     <img class="img-logo mobile" src="images/logo.png" alt="">
     <div class="input-group">
       <input type="text">
-      <button>
-        <img src="images/search.svg">
-      </button>
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      
     </div>
-    <img class="img-icon mobile" src="images/carrito.svg">
-    <img class="img-icon mobile" src="images/menu.svg">
-
+    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-bars"></i>
   </header>
   <!-- HEADER DESK -->
   <header class="desk">
     <div class="top-header">
       <form action="">
         <input type="text" placeholder="Buscar">
-        <button class="btnsearch">
-          <img src="images/search.svg">
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
 
@@ -38,13 +39,11 @@
       </div>
       <div class="opciones">
         <button class="btn">Ingresar</button>
-        <div>
-          <img src="images/carrito.svg" alt="">
-        </div>
+        <i class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
     <nav class="navbar">
-      <a>Géneros</a>
+      <a class="item-select">Géneros</a>
       <a>Novedades</a>
       <a>Autores</a>
       <a>Contacto</a>

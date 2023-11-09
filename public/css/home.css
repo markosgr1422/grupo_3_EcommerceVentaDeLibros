@@ -34,12 +34,12 @@ header.mobile input {
 
 }
 
-.mobile .input-group button {
+.btn-search {
     position: absolute;
     width: 1.5rem;
     background-color: transparent;
     border: none;
-    right: .5rem;
+    right: .9rem;
     top: .5rem
 }
 
@@ -47,10 +47,18 @@ header.mobile input {
     max-width: 3rem;
 }
 
-.mobile .img-icon {
-    max-width: 1.5rem;
+.fa-solid {
+    font-size: 1.5rem;
 }
 
+
+header.desk {
+    background-color: white;
+    display: none;
+    flex-direction: column;
+
+
+}
 
 
 @media (min-width: 750px) {
@@ -63,13 +71,7 @@ header.mobile input {
     }
 }
 
-header.desk {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
 
-
-}
 
 .top-header {
     display: flex;
@@ -120,8 +122,49 @@ header.desk {
     
 }
 
+.desk form img{
+    width: 1.5rem;
+}
+
 .opciones {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 1rem;
+}
+
+.opciones img {
+    width: 1.5rem;
+}
+
+.btn-search {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    border: none;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1024px;
+    z-index: 1;
+    height: 3rem;
+}
+
+.navbar a {
+    padding: .5rem 1rem;
+    transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.navbar a:hover{
+    z-index: 0;
+    background-color: #23BFF2;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
 }
