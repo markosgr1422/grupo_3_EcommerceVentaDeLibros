@@ -326,12 +326,51 @@ label.cantidad-producto {
 .producto-envio {
     display: flex;
     flex-direction: column;
+    border-bottom: solid 0.1rem;
+    padding-bottom: 10px;
 }
+
+.resumen-compra{
+    border: solid #23BFF2;
+    background: #23BFF2;
+    border-radius: 0.4rem 0.4rem 0 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.resumen-compra-total{ 
+    padding: 10px;
+    border: solid 0.1rem;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.text-resumen{
+    font-weight: 600;
+}
+
+
 
 .detalle,
 .total {
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+}
+
+.detalle{
+    padding-bottom: 10px;
+}
+
+.contenedor-btn{
+    text-align: center;
+}
+.btn-compra{
+    border: solid #23BFF2;
+    background: #23BFF2;
+    color: black;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    width: 18rem;
 }
 
 @media (min-width: 562px) {
