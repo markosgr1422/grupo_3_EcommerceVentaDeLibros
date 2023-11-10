@@ -18,6 +18,14 @@ app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/views/login.html');
 });
 
+app.get('/product', (req,res)=>{
+    res.sendFile(__dirname + '/views/product_detail1.html');
+});
+
+app.get('/carrito', (req,res)=>{
+    res.sendFile(__dirname + '/views/carrito.html');
+});
+
 app.listen(1422, () =>{
     console.log("Server UP");
 })
