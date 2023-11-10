@@ -178,8 +178,10 @@ section {
     margin: 3rem auto;
     gap: 2rem;
     overflow: scroll;
-    scroll-behavior: smooth;
+}
 
+section::-webkit-scrollbar {
+    display: none;
 }
 
 h2 {
@@ -189,8 +191,18 @@ h2 {
 article {
     height: 300px;
     width: 200px;
-    min-width: 8rem;
+    min-width: 10rem;
     background-color: aquamarine;
+}
+
+.menu-icon {
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
+
+
+.menu-icon:hover {
+    
 }
 
 
