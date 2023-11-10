@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -48,7 +49,7 @@ header.mobile input {
 }
 
 .fa-solid {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 
@@ -71,6 +72,7 @@ header.desk {
     flex-wrap: wrap;
     width: 100%;
     max-width: 1024px;
+    padding: 0 2rem;
     margin: auto;
     align-items: center;
 
@@ -90,7 +92,7 @@ header.desk {
     width: 100%;
 }
 
-.logo h1{
+.logo h1 {
     font-size: 1rem;
 
 }
@@ -116,11 +118,11 @@ header.desk {
     border: 1px solid #3d3d3d90;
     border-radius: 2rem;
     outline: none;
-    padding: 0 1rem;  
-    
+    padding: 0 1rem;
+
 }
 
-.desk form img{
+.desk form img {
     width: 1.5rem;
 }
 
@@ -138,7 +140,7 @@ header.desk {
 .btn-search {
     position: absolute;
     right: .5rem;
-    top: .5rem;
+    top: .75rem;
     border: none;
 }
 
@@ -159,7 +161,7 @@ header.desk {
     transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.navbar a:hover{
+.navbar a:hover {
     z-index: 0;
     background-color: #23BFF2;
     border-radius: 30px;
@@ -174,10 +176,10 @@ section {
     width: 100%;
     max-width: 1024px;
     flex-wrap: nowrap;
-    justify-content: space-between;
     margin: 3rem auto;
-    gap: 2rem;
+    gap: 1rem;
     overflow: scroll;
+    padding: 0 1rem;
 }
 
 section::-webkit-scrollbar {
@@ -186,61 +188,160 @@ section::-webkit-scrollbar {
 
 h2 {
     text-align: center;
+    margin: 1rem;
 }
 
-article {
-    height: 300px;
+.card {
     width: 200px;
     min-width: 10rem;
-    background-color: aquamarine;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #3d3d3d65;
+    border-radius: 10px;
 }
 
-/* seccion de carrito */
+.card:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
 
-.main-producto-top{
+
+
+.card img {
+    height: 250px;
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-card {
+    padding: .5rem;
+}
+
+.card h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #23BFF2;
+}
+
+/* CARRUSEL */
+.carrusel {
+    width: 100%;
+}
+
+.contenedor-carrusel {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flechas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flechas a {
+    background-color: #00000094;
+    aspect-ratio: 1/1;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 100%;
+}
+
+
+/* SECCION CARRITO */
+
+.main-producto-top {
     display: flex;
     flex-direction: column;
 }
 
-.titulo-producto{
+.titulo-producto {
     position: relative;
     right: -53px;
     top: 20px;
 }
 
-.productos{
+.productos {
     width: 90vw;
     height: 200px;
 
 }
 
-figure.articulos{
+figure.articulos {
     display: flex;
     align-items: center;
 }
 
-label.cantidad-producto{
+label.cantidad-producto {
     display: flex;
     justify-content: center;
     align-items: start;
 }
 
 /* main-resumen */
-.main-resumen{
+.main-resumen {
     display: flex;
     flex-direction: column;
 }
 
-.producto-envio{
+.producto-envio {
     display: flex;
     flex-direction: column;
 }
 
 .detalle,
-.total{
+.total {
     display: flex;
     justify-content: space-between;
 }
+
+@media (min-width: 562px) {
+
+
+    section {
+
+        display: flex;
+        width: 100%;
+        max-width: 1024px;
+        flex-wrap: wrap;
+        overflow: scroll;
+    }
+
+    .card {
+        width: calc(50% - 1rem);
+        min-width: 150px;
+    }
+}
+
 
 
 @media (min-width: 750px) {
@@ -250,6 +351,11 @@ label.cantidad-producto{
 
     header.mobile {
         display: none;
+    }
+
+    .card {
+        width: 22%;
+        min-width: 150px;
     }
 
     section {
