@@ -193,6 +193,53 @@ article {
     background-color: aquamarine;
 }
 
+/* seccion de carrito */
+
+.main-producto-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-producto{
+    position: relative;
+    right: -53px;
+    top: 20px;
+}
+
+.productos{
+    width: 90vw;
+    height: 200px;
+
+}
+
+figure.articulos{
+    display: flex;
+    align-items: center;
+}
+
+label.cantidad-producto{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* main-resumen */
+.main-resumen{
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-envio{
+    display: flex;
+    flex-direction: column;
+}
+
+.detalle,
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media (min-width: 750px) {
     header.desk {
