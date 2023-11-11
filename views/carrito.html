@@ -20,6 +20,8 @@
         <i class="fa-solid fa-cart-shopping"></i>
         <i class="fa-solid fa-bars"></i>
       </header>
+
+
       <!-- HEADER DESK -->
       <header class="desk">
         <div class="top-header">
@@ -48,43 +50,52 @@
       </header>
 
 
-      <main>
+      <main class="main-carrito">
+
+        <h4 class="titulo-producto">Productos</h4>
 
         <section class=main-producto-top>
-            <h4 class="titulo-producto">Productos</h4>
-        <article class=productos>
-      <figure class=articulos>
+          <article class="productos">
 
-        <div class="img-libro">
-            <img src=imagesHarry-potter.jpg alt=Harry-potter>
-        </div>
-        
-        <figcaption class="descripcion">
-            <div>
-
-                <p>Producto</p>
-                <p>precio</p>
-
-            </div>
+            <figure class="img-libro">
+              <img src="images/harry potter y el legado maldito.jpg" alt="Harry-potter" class="img-producto">
+            </figure>
+            <figcaption class="descripcion">
+              <div>
   
-          <form class="incremento">
-              <button type="reset">Eliminar</button>
-              <button type=submit>Guardar</button>
-          </form>
+                  <p>Producto</p>
+                  <p>precio</p>
+  
+              </div>
+    
+            <form class="incremento">
+                <button type="reset">Eliminar</button>
+                <button type=submit>Guardar</button>
+            </form>
+  
+          </figcaption>
+          
+          <label class="cantidad-producto">
+            <button>-</button>3<button>+</button>
+          </label>
+          </figure>
 
-        </figcaption>
-        <label class="cantidad-producto">
-          <button>-</button>3<button>+</button>
-        </label>
-      </figure>
-      
-        </article>
-   
+
+
+
+
+          </article>
         </section>
 
+
+        <!-- seccion del resumen de compra -->
         <section class="main-resumen">
-            <h4 class="resumen-compra">Resumen de compra</h4>
-            <article class="resumen-compra-total">
+
+          <div class="resumen-compra">
+            <h4>Resumen de compra</h4>
+          </div>
+
+          <article class="resumen-compra-total">
                 <div class="producto-envio">
                     <div class="detalle">
                         <p class="text-resumen">Producto</p>
@@ -102,10 +113,10 @@
                     <p class="text-resumen">123.152</p>
                 </div>
                 
+                <div class="contenedor-btn">
+                  <button type="submit" class="btn-compra">Comprar</button>
+                </div>
               </article>
-              <div class="contenedor-btn">
-                <button type="submit" class="btn-compra">Comprar</button>
-              </div>
 
         </section>
 
