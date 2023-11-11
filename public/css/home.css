@@ -7,6 +7,7 @@
     list-style: none;
     position: relative;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 header.mobile {
@@ -52,6 +53,14 @@ header.mobile input {
     font-size: 1rem;
 }
 
+a .fa-solid {
+    color: black;
+}
+
+.logo {
+    color: black;
+    font-style: italic;
+}
 
 header.desk {
     background-color: white;
@@ -149,7 +158,7 @@ header.desk {
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem auto;
+    margin: .5rem auto 0;
     width: 100%;
     max-width: 1024px;
     z-index: 1;
@@ -159,12 +168,12 @@ header.desk {
 .navbar a {
     padding: .5rem 1rem;
     transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    border-radius: 30px;
 }
 
 .navbar a:hover {
     z-index: 0;
     background-color: #23BFF2;
-    border-radius: 30px;
     color: white;
     cursor: pointer;
 }
@@ -206,8 +215,6 @@ h2 {
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-
-
 .card img {
     height: 250px;
     max-height: 250px;
@@ -235,8 +242,46 @@ h2 {
 }
 
 footer {
-    background-color: #23BFF2;
+    /* background-color: #23BFF2; */
+    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
 }
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.listas {
+    width: 100%;
+}
+
+
+.listas li {
+    margin: .5rem 0;
+}
+
+footer .logo {
+    width: 6rem;
+    margin: 0 auto;
+}
+
+
+footer .redes {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.redes .fa-brands{
+    font-size: 1.5rem;
+}
+
 
 /* CARRUSEL */
 .carrusel {
@@ -364,7 +409,6 @@ label.cantidad-producto {
 }
 
 
-
 .detalle,
 .total {
     display: flex;
@@ -407,6 +451,12 @@ label.cantidad-producto {
     .card {
         width: calc(50% - 1rem);
         min-width: 150px;
+    }
+
+    footer .listas {
+        display: flex;
+        gap: 2rem;
+        width: auto;
     }
 }
 
