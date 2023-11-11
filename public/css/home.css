@@ -456,7 +456,11 @@ label.cantidad-producto {
     footer .listas {
         display: flex;
         gap: 2rem;
-        width: auto;
+        width: auto ;
+    }
+
+    footer .logo {
+        margin: 0;
     }
 }
 
