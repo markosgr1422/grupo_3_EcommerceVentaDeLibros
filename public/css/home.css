@@ -10,6 +10,10 @@
     text-decoration: none;
 }
 
+a {
+    color: black;
+}
+
 header.mobile {
     background-color: #23BFF2;
     height: 4rem;
@@ -56,6 +60,11 @@ header.mobile input {
 a .fa-solid {
     color: black;
 }
+
+.btn i { 
+    color: white;
+}
+
 
 .logo {
     color: black;
@@ -188,7 +197,7 @@ section {
     margin: 3rem auto;
     gap: 1rem;
     overflow: scroll;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 
 section::-webkit-scrollbar {
