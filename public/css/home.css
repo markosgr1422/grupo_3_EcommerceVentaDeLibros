@@ -343,24 +343,31 @@ footer .redes {
 
 /* SECCION CARRITO */
 
-.main-producto-top {
-    padding: 1rem;
+.main-carrito{
     display: flex;
     flex-direction: column;
-    border: solid;
+    width: 100%;
+}
 
+.main-producto-top {
+
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .titulo-producto {
     position: relative;
-    right: -40px;
-    top: 38px;
+    right: -33px;
+    top: 42px;
 }
 
 .productos {
-    width: 90vw;
-    height: 200px;
+    width: 70%;
     display: flex;
+    justify-content: space-between;
+    border: solid 0.1rem rgb(35 191 242 / 0.45);
+    padding: 10px;
 }
 
 .descripcion{
@@ -372,15 +379,40 @@ footer .redes {
 
 label.cantidad-producto {
     display: flex;
-    justify-content: center;
-    align-items: start;
+    align-self: start;
+    align-items: center;
+    border: solid 0.1rem #23bff2;
+    
 }
 
+
+.btn-borrar,
+.btn-delete,
+.btn-guardar{
+    background-color: #23bff2;
+    border: solid #23bff2 10px;
+    color: white;
+    border-radius: 0.9rem;
+}
+
+.btn-suma,
+.btn-resta{
+    margin: 2px;
+    background-color: #23bff2;
+    border: solid #23bff2 10px;
+    color: white;
+    
+}
+
+.btn-borrar{
+    align-self: self-start;
+}
 
 .img-producto{
-    width: 36vw;
-    height: 40vw;
+    width: 5rem;
 }
+
+
 
 
 /* main-resumen */
@@ -476,16 +508,22 @@ label.cantidad-producto {
 
 
 /* Seccion de carrito */
-/* .main-carrito{
-    display: flex;
-} */
 
-
-.main-resumen{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.main-carrito{
+    width: 75%;
+   
 }
+
+.productos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: solid 0.1rem rgb(35 191 242 / 0.45);
+    padding: 10px;
+}
+
+
+
 
 
 @media (min-width: 750px) {
@@ -510,4 +548,24 @@ label.cantidad-producto {
         height: 600px;
         overflow: hidden;
     }
+}
+
+
+
+/* SECCION CARRITO */
+
+.main-carrito{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main-resumen{
+    width: 63%;
+}
+
+
+@media (min-width: 1200px){
+
+
 }
