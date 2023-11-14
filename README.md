@@ -7,7 +7,7 @@
 
 ### Nuestro equipo esta conformado por:
 
-- Luciano Amado
+- Luciano Amado: Tengo 30 años, soy de Sgo del estero, la banda. soy vendedor de playa y docente de musica, ahora me encuentro iniciando en el mundo de la programacion de manera autodidactica. 
 - Bruno Gorosito: Tengo 23 años, soy de Sgo del Estero. Estoy estudiando programación en el ITSE y en paralelo aprendo Desarrollo web (back-end y front-end) de forma autodidacta.
 - Luciana Maud: Tengo 21 años, soy de Sgo del Estero. Soy estudiante de Licenciatura en Psicología.
 - Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
