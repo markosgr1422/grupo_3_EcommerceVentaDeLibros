@@ -53,75 +53,77 @@
       <main class="main-carrito">
 
         <h4 class="titulo-producto">Productos</h4>
-
-        <section class=main-producto-top>
-          <article class="productos">
-
-            <figure class="img-libro">
-              <img src="images/harry potter y el legado maldito.jpg" alt="Harry-potter" class="img-producto">
-            </figure>
-            <figcaption class="descripcion">
-              <div>
+        <div class="section-contenedor">
+          <section class=main-producto-top>
+            <article class="productos">
   
-                  <p>Producto</p>
-                  <p>precio</p>
-  
-              </div>
+              <figure class="img-libro">
+                <img src="images/harry potter y el legado maldito.jpg" alt="Harry-potter" class="img-producto">
+              </figure>
+              <figcaption class="descripcion">
+                <div>
     
-            <form class="incremento">
-                <button type="reset" class="btn-delete">Eliminar</button>
-                <button type=submit class="btn-guardar">Guardar</button>
-            </form>
+                    <p>Producto</p>
+                    <p>precio</p>
+    
+                </div>
+      
+              <form class="incremento">
+                  <button type="reset" class="btn-delete">Eliminar</button>
+                  <button type=submit class="btn-guardar">Guardar</button>
+              </form>
+    
+            </figcaption>
+            
+            <label class="cantidad-producto">
+              <button class="btn-resta">-</button> 3 <button class="btn-suma">+</button>
+            </label>
+            </figure>
   
-          </figcaption>
+  
+  
+  
+  
+            </article>
+  
+              <!-- <button type="reset" class="btn-borrar">X</button> -->
           
-          <label class="cantidad-producto">
-            <button class="btn-resta">-</button> 3 <button class="btn-suma">+</button>
-          </label>
-          </figure>
+          </section>
+          <!-- seccion del resumen de compra -->
+          <section class="main-resumen">
+  
+            <div class="resumen-compra">
+              <h4>Resumen de compra</h4>
+            </div>
+  
+            <article class="resumen-compra-total">
+                  <div class="producto-envio">
+                      <div class="detalle">
+                          <p class="text-resumen">Producto</p>
+                          <p class="text-resumen">$31.000</p>
+                      </div>
+                      <div class="detalle">
+                          <p class="text-resumen">Envio</p>
+                          <p class="text-resumen">1.312</p>
+                      </div>
+                  </div>
+  
+  
+                  <div class="total">
+                      <p class="text-resumen">total</p>
+                      <p class="text-resumen">123.152</p>
+                  </div>
+                  
+                  <div class="contenedor-btn">
+                    <button type="submit" class="btn-compra">Comprar</button>
+                  </div>
+                </article>
+  
+          </section>
 
-
-
-
-
-          </article>
-
-            <!-- <button type="reset" class="btn-borrar">X</button> -->
+        </div>
         
-        </section>
-        
 
-        <!-- seccion del resumen de compra -->
-        <section class="main-resumen">
-
-          <div class="resumen-compra">
-            <h4>Resumen de compra</h4>
-          </div>
-
-          <article class="resumen-compra-total">
-                <div class="producto-envio">
-                    <div class="detalle">
-                        <p class="text-resumen">Producto</p>
-                        <p class="text-resumen">$31.000</p>
-                    </div>
-                    <div class="detalle">
-                        <p class="text-resumen">Envio</p>
-                        <p class="text-resumen">1.312</p>
-                    </div>
-                </div>
-
-
-                <div class="total">
-                    <p class="text-resumen">total</p>
-                    <p class="text-resumen">123.152</p>
-                </div>
-                
-                <div class="contenedor-btn">
-                  <button type="submit" class="btn-compra">Comprar</button>
-                </div>
-              </article>
-
-        </section>
 
       
       </main>
