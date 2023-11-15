@@ -121,6 +121,18 @@ input:invalid+.error-message {
     display: block;
 }
 
+#back-arrow {
+    color: white;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-left: 50px;
+}
+.back-button{
+    display: flex;
+    width: auto;
+    height: 50px;
+}
+
 /*MEDIA QUERIES*/
 @media(min-width:992px) {
     .formulario {

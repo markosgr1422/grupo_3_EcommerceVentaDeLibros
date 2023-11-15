@@ -6,8 +6,8 @@ app.use(express.static(__dirname + "/public"));
 
 
 
-app.get("/registrar", (req, res)=>{
-    res.sendFile(__dirname + "/views/registrar.html");
+app.get("/register", (req, res)=>{
+    res.sendFile(__dirname + "/views/register.html");
 });
 
 app.get("/", (req, res)=>{
