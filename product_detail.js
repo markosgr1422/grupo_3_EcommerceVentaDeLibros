@@ -1,6 +1,6 @@
 const book = {
     title: "Título del Libro",
-    cover: "portada_del_libro.jpg",
+    cover: "ruta/a/la/portada_del_libro.jpg",
     author: "Nombre del Autor",
     genre: "Género del Libro",
     publisher: "Nombre de la Editorial",
@@ -17,7 +17,7 @@ const book = {
 
 function loadBookDetails() {
     document.getElementById("book-title").textContent = book.title;
-    document.getElementById("book-cover").src = book.cover;
+    document.getElementById("book-cover").src = book.cover; // Asignar la ruta correcta de la imagen de la portada del libro
     document.getElementById("book-author").textContent = `Autor: ${book.author}`;
     document.getElementById("book-genre").textContent = `Género: ${book.genre}`;
     document.getElementById("book-publisher").textContent = `Editorial: ${book.publisher}`;
