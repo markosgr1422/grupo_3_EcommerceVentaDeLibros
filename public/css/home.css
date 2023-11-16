@@ -384,6 +384,7 @@ label.cantidad-producto {
   border: solid #23bff2 10px;
   color: white;
   border-radius: 0.9rem;
+  cursor: pointer;
 }
 
 .btn-suma,
@@ -460,6 +461,7 @@ label.cantidad-producto {
   border-radius: 1rem;
   font-size: 1.2rem;
   width: 50%;
+  cursor: pointer;
 }
 
 @media (min-width: 562px) {
