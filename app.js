@@ -1,7 +1,7 @@
 const express = require ("express");
 const app = express();
 const path = require("path")
-
+app.set('view engine','ejs')
 const mainRouter = require('./routes/main')
 
 app.use(express.static(__dirname + "/public"));

@@ -3,53 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Libres libros</title>
     <link rel="stylesheet" href="css/home.css">
     <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="mobile">
-        <img class="img-logo mobile" src="images/logo.png" alt="">
-        <div class="input-group">
-          <input type="text">
-            <button class="btn-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          
-        </div>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <i class="fa-solid fa-bars"></i>
-      </header>
-
-
+      <!-- HEADER MOBIL -->
       <!-- HEADER DESK -->
-      <header class="desk">
-        <div class="top-header">
-          <form action="">
-            <input type="text" placeholder="Buscar">
-            <button class="btn-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-    
-          <div class="logo">
-            <img src="images/logo.png" alt="">
-            <h1>Libres Libros</h1>
-          </div>
-          <div class="opciones">
-            <button class="btn">Ingresar</button>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <nav class="navbar">
-          <a class="item-select">Géneros</a>
-          <a>Novedades</a>
-          <a>Autores</a>
-          <a>Contacto</a>
-        </nav>
-      </header>
-
-
+      <%- include('partials/header') %>
+      
       <main class="main-carrito">
 
         <h4 class="titulo-producto">Productos</h4>
@@ -128,28 +90,7 @@
       
       </main>
 
-      <footer>
-        <div class="container">
-          <div class="listas">
-            <ul>
-              <li>Más información</li>
-            </ul>
-            <ul>
-              <li>Categorias</li>
-              <li>Autores</li>
-              <li>Sobre nosotros</li>
-            </ul>
-            
-    
-          </div>
-          <img class="logo" src="images/logo.png">
-          <div class="redes">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-          </div>
-        </div>
-      </footer>
-    
+  <!-- FOOTER -->
+<%- include('partials/footer') %>    
 </body>
 </html>
