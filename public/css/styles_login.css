@@ -26,7 +26,10 @@ body {
 
 .formulario {
     background-color: white;
+    margin: auto;
+    width: 500px;
     margin-top: 150px;
+    border-radius: 2%;
     padding: 3px;
 }
 
@@ -134,11 +137,11 @@ input:invalid+.error-message {
 }
 
 /*MEDIA QUERIES*/
-@media(min-width:992px) {
+/* @media(min-width:992px) {
     .formulario {
         margin: auto;
         width: 500px;
         margin-top: 150px;
         border-radius: 2%;
     }
-}
+} */
