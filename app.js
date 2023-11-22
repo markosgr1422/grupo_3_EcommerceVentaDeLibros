@@ -1,6 +1,8 @@
-const express = require ("express");
+const express = require('express')
+
 const app = express();
-const path = require("path")
+
+
 app.set('view engine','ejs')
 const mainRouter = require('./routes/main')
 

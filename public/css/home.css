@@ -347,7 +347,7 @@ footer .redes {
 .main-producto-top {
   display: flex;
   flex-direction: row;
-  max-width: 435px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -409,7 +409,7 @@ label.cantidad-producto {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  max-width: 435px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -541,10 +541,13 @@ label.cantidad-producto {
   }
 
   .main-carrito {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
   }
 
+  .main-producto-top{
+    max-width: 1000px;
+  }
   .main-resumen {
     width: 63%;
     /* max-width: 315px; */
