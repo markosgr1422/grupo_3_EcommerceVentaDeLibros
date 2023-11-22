@@ -21,7 +21,7 @@ body {
 
 .contenedor {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
 }
 
 .formulario {
@@ -43,8 +43,8 @@ h1 {
 /* input[type="email"],
 input[type="password"] { */
 input {
+    flex: 1;
     font-size: 20px;
-    width: 82%;
     padding: 10px;
     border: none;
 }
@@ -56,10 +56,10 @@ input[type="checkbox"] {
 }
 
 .input-contenedor {
+    display: flex;
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
-
 .redirect-login {
     text-decoration: none;
     color:black;
@@ -75,8 +75,8 @@ button {
 }
 
 .icon {
-    min-width: 50px;
-    text-align: center;
+    font-weight: 900;
+    padding: 10px;
     color: #999
 }
 
@@ -134,6 +134,11 @@ input:invalid+.error-message {
     display: flex;
     width: auto;
     height: 50px;
+}
+
+#genero{
+    width: 100%;
+    color: #666;
 }
 
 /*MEDIA QUERIES*/
