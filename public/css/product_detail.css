@@ -1,4 +1,6 @@
 
+
+
 .product-details {
     text-align: left; 
     margin: 20px;
@@ -8,12 +10,46 @@
     background-color: #ffffff; 
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); 
 }
+
+
 .product-details h1 {
     color: #1a2537; 
     font-size: 2.5rem; 
     margin-bottom: 20px; 
 }
-@media (max-width: 768px) {
+
+/* ajustes en la figure */
+
+.figure-product{
+    display: flex;
+    gap: 15px;
+}
+
+
+/* titulo del producto e imagen  */
+
+.book-title{
+    text-align: center;
+}
+
+.img-product{
+    width: 200px;
+    max-width: 620px;
+}
+
+
+
+
+
+/* @media (min-width:620px){
+
+
+
+
+
+}
+
+@media (min-width: 768px) {
     .product-details {
         padding: 15px; 
         margin: 10px; 
@@ -23,4 +59,4 @@
     .product-details h1 {
         font-size: 1.8rem; 
     }
-}
+} */
