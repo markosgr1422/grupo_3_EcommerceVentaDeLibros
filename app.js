@@ -11,5 +11,5 @@ app.use(mainRouter)
 
 const PORT = 2000
 app.listen(PORT, ()=>{
-    console.log(`Servidor escuchando puerto ${PORT}`)
+    console.log(`Servidor corriendo en puerto ${PORT}`)
 })

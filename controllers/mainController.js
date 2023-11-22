@@ -14,7 +14,13 @@ const controllers = {
         res.render(path.resolve(__dirname, "../views/carrito.ejs"));
     },
     product: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/product_detail1.ejs"));
+        res.render(path.resolve(__dirname, "../views/product_detail.ejs"));
+    },
+    edit: (req, res)=>{
+        res.render(path.resolve(__dirname, "../views/admin_edit.ejs"));
+    },
+    create: (req, res)=>{
+        res.render(path.resolve(__dirname, "../views/admin_create.ejs"));
     },
 }
 

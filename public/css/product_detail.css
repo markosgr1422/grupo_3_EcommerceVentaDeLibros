@@ -1,11 +1,4 @@
-body {
-    font-family: 'Poppins', sans-serif; 
-    margin: 0;
-    background: url(../images/background.png), rgba(0, 0, 0, 0.384);
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-}
+
 .product-details {
     text-align: left; 
     margin: 20px;
