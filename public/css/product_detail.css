@@ -14,10 +14,11 @@
 
 .product-details h1 {
     color: #1a2537;
-    font-size: 1.0rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     max-width: 620px;
     text-align: center;
+    min-width: 1.4rem;
 }
 
 /* ajustes en la figure */
@@ -110,7 +111,8 @@
 
 
 
-/* @media (min-width:620px){
+
+ @media (min-width:620px){
 
 
 
@@ -120,12 +122,9 @@
 
 @media (min-width: 768px) {
     .product-details {
-        padding: 15px; 
-        margin: 10px; 
-        border: 1px solid #ccc; 
+        margin: 2rem auto;
+        max-width: 900px;
     }
 
-    .product-details h1 {
-        font-size: 1.8rem; 
-    }
-} */
+    
+} 
