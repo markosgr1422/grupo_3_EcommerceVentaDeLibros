@@ -372,10 +372,12 @@ footer .redes {
 }
 
 label.cantidad-producto {
-  display: flex;
-  align-self: start;
-  align-items: center;
-  border: solid 0.1rem #23bff2;
+    background-color: #23bff2;
+    display: flex;
+    align-self: start;
+    align-items: center;
+    border: solid 0.1rem #8389a3;
+    color: white;
 }
 
 .btn-borrar,
