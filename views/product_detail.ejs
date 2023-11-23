@@ -18,22 +18,32 @@
             <h1 id="book-title" class="book-title">Título del Libro</h1>
             <figure class="figure-product">
                 <img class="img-product" src="images/harry potter y el legado maldito.jpg" alt="Portada del Libro">
-                <figcaption>
-                    <p>Libro: Harry Potter</p>
-                    <p id="book-author">Autor: Nombre del Autor</p>
-                    <p id="book-price">Precio: $199.99</p>
+                <figcaption class="book-descripcion">
+                    <div class="book-autor-title">
+                        <p class="book-title-product">Harry Potter</p>
+                        <p class="book-author">Autor</p>
+                    </div>
+                    <p class="book-price">$199.99</p>
                 </figcaption>
             </figure>
             
-            <div>
-                <button type="submit">Comprar</button>
-                <div>
-                    <button>+</button>
-                    <p>3</p>
-                    <button>-</button>
+            <div class="seccion-btn">
+                <button type="submit" class="btn-carrito">Carrito</button>
+                <div class="btn-increment">
+                    <button type="button" class="btn-mas"><i class="fa-solid fa-plus"></i></button>
+                    <p class="num-btn">3</p>
+                    <button type="button" class="btn-menos"><i class="fa-solid fa-minus"></i></button>
                 </div>
             </div>
-
+            <div>
+                <div class="info-product">
+                    <p>Descripcion</p>
+                    <p>Detalles</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ratione tempora dolores. Tempora tenetur, labore omnis recusandae harum fuga placeat exercitationem eaque doloremque. Fugiat nobis illo consectetur, corporis eaque hic?</p>
+                </div>
+            </div>
         </article>
         
         <!-- <p id="book-genre">Género: Género del Libro</p>
