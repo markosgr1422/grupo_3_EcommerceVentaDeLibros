@@ -1,130 +1,140 @@
-
-
-
-.product-details {
-    text-align: left; 
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #3d3d3d65; 
-    border-radius: 10px; 
-    background-color: #ffffff; 
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); 
+.container {
+    /* position: relative; */
+    padding: 1rem;
+    padding-top: 3rem;
+    margin: 0 auto;
 }
 
-
-.product-details h1 {
-    color: #1a2537;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    max-width: 620px;
-    text-align: center;
-    min-width: 1.4rem;
-}
-
-/* ajustes en la figure */
-
-.figure-product{
+.btn-back {
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 50px;
     display: flex;
-    gap: 15px;
-}
-
-
-/* titulo del producto e imagen  */
-
-.book-title{
-    text-align: center;
-}
-
-.img-product{
-    width: 150px;
-    min-width: 80px;
-    max-width: 620px;
-}
-
-/* book de los parrafos */
-
-.book-descripcion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-}
-
-.book-title-product{
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.book-author{
-    font-size: 0.8rem;
-    color: #9e9ea1;
-}
-
-/* botones */
-
-.seccion-btn{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-.btn-increment{
-    display: flex;
-    border: solid 0.1rem #576476;
-    border-radius: 1rem;
     align-items: center;
-    gap: 10px;
-    padding: 0.3rem;
-    background: #23bff2;
-    color: white;
-}
-
-.btn-mas,.btn-menos{
-    background-color: #23bff2;
-    outline: none;
-    border: solid 0.1rem #23bff2;
-    /* border-radius: 1rem; */
-    padding: 0.5rem;
+    gap: .5rem;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #23BFF2;
     color: white;
 }
 
-.btn-carrito{
-    border: solid 0.1rem #576476;
-    border-radius: 1rem;
-    padding: 1.1rem;
-    background: #23bff2;
-    color: white;
-    font-size: 0.9rem;
+.img-book {
+    width: 100%;
 }
 
+.img-book img {
+    width: 100%;
+    max-height: 400px;
+    margin: 1rem auto;
+    object-fit: contain;
+}
 
-/* informacion del producto */
-
-.info-product{
+.info {
+    margin: 1rem 0;
     display: flex;
-    padding-top: 10px;
-    justify-content: space-between;
-    gap: 91px;
-    border-bottom: solid 1px;
-    margin-bottom: 10px;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.num-btn {
+    padding: .5rem;
+}
+
+.btn-quantity {
+    display: flex;
+    gap: 1px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.btn-quantity button {
+    padding: .5rem .75rem;
+    background-color: #23BFF2;
+    border: none;
+    outline: none;
+    color: white;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
 }
 
 
+.btn-carrito {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    padding: .75rem 0;
+    background-color: #23BFF2;
+    outline: none;
+    cursor: pointer;
+    color:white;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
+.btn-carrito:hover {
+    background-color: #1fa1cc;
+}
 
- @media (min-width:620px){
+.nav-detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #777777;
+}
 
+.nav-detail li {
+    padding: 0;
+    width: 50%;
+    text-align: center;
+    padding: .75rem 0;
+}
 
+.nav-detail li.active {
+    background-color: #23bef281;
+}
 
+/* .details-container {
+    min-width: calc(200% + 2rem) !important;
+    display: flex;
+    gap: 2rem;
+}
 
+.description, .detail {
+    width: 50%;
+}
+*/
+.description div {
+    margin: .5rem 0;
+} 
 
+ol li {
+    
+    line-height: 1.5rem;
+}
+
+.description ol li {
+    padding-left: .4rem;
+}
+
+@media (min-width:620px) {
+    .container .flex{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .img-book {
+        width: 45%;
+    }
 }
 
 @media (min-width: 768px) {
-    .product-details {
-        margin: 2rem auto;
-        max-width: 900px;
-    }
-
     
-} 
+
+
+}

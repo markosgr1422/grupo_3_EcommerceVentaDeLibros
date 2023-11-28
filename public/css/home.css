@@ -22,7 +22,8 @@ header.mobile {
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    min-width: 430px;
+    /* min-width: 430px; */
+    
 }
 
 

@@ -1,68 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Libro</title>
+    <title>Harry Potter y el Legado Maldito</title>
     <link rel="stylesheet" type="text/css" href="css/product_detail.css">
-    <link rel="stylesheet" href="css/home.css">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
     <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- header Mobil + desktop -->
 
     <%- include('partials/header.ejs') %>
 
-    
-        <article class="product-details">
-            <h1 id="book-title" class="book-title">Título del Libro</h1>
-            <figure class="figure-product">
-                <img class="img-product" src="images/harry potter y el legado maldito.jpg" alt="Portada del Libro">
-                <figcaption class="book-descripcion">
-                    <div class="book-autor-title">
-                        <p class="book-title-product">Harry Potter</p>
-                        <p class="book-author">Autor</p>
-                    </div>
-                    <p class="book-price">$199.99</p>
-                </figcaption>
-            </figure>
-            
-            <div class="seccion-btn">
-                <button type="submit" class="btn-carrito">Carrito</button>
-                <div class="btn-increment">
-                    <button type="button" class="btn-mas"><i class="fa-solid fa-plus"></i></button>
+        <div class="container flex">
+            <div class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i>Inicio
+            </div>
+            <div class="img-book">
+                <img src="images/harry potter y el legado maldito.jpg" alt="portada de libro">
+            </div>
+            <div class="info">
+                <h1>Harry Potter y el Legado Maldito</h1>
+
+                <p class="book-title-product">Harry Potter</p>
+                <p class="book-author">Autor</p>
+                <p class="book-price">$199.99</p>
+                <div class="btn-quantity">
+                    <button type="button" class="btn-mas"><i class="fa-solid fa-minus"></i></button>
                     <p class="num-btn">3</p>
-                    <button type="button" class="btn-menos"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="btn-menos"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <button type="submit" class="btn-carrito">Carrito</button>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <ul class="nav-detail">
+                <li class="">Descripción</li>
+                <li class="active">Detalle</li>
+            </ul>
+            <div class="details-container">
+                <div class="description" id="description">
+                    <div>
+                        <h4>Sinopsis:</h4>
+                        <p>En este tercer volumen de la serie Harry Potter, que se desarrolla en 1997,
+                            los estudiantes del colegio Hogwarts regresan a clases después de un verano lleno de
+                            peligros
+                            los estudiantes del colegio Hogwarts regresan a sus clases después de un verano
+                            lleno de peligros y sorpresas. Sin embargo, cuando una nueva amenaza surge
+                            en el mundo mágico, los estudiantes deben trabajar juntos para protegerse y
+                            descubrir quién o qué está detrás de ella.</p>
+                    </div>
+                    <div>
+                        <h4>Contenido:</h4>
+                        <ol>
+                            <li>Prefacio por J.K. Rowling</li>
+                            <li>Capítulo 1: El regreso al Hogwarts</li>
+                            <li>Capítulo 2: La torre de Hagrid</li>
+                            <li>Capítulo 3: Los profesores vuelven a su casa</li>
+                            <li>Capítulo 4: La cena con Dumbledore</li>
+                            <li>Capítulo 5: El secreto de las escaleras secretas</li>
+                            <li>Capítulo 6: El jardín de magia</li>
+                            <li>Capítulo 7: El castillo de Hogwarts</li>
+                            <li>Capítulo 8: La biblioteca de Hogwarts</li>
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="detail" id="detail">
+                    <ol>
+                        <li>Cantidad de Paginas:</li>
+                        <li>Editorial:</li>
+                        <li>Año de lanzamiento:</li>
+                        <li>ISBN:</li>
+                        <li>Idioma:</li>
+                    </ol>
                 </div>
             </div>
-            <div>
-                <div class="info-product">
-                    <p>Descripcion</p>
-                    <p>Detalles</p>
-                </div>
-                <div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ratione tempora dolores. Tempora tenetur, labore omnis recusandae harum fuga placeat exercitationem eaque doloremque. Fugiat nobis illo consectetur, corporis eaque hic?</p>
-                </div>
-            </div>
-        </article>
-        
-    
-
-    
-    <div class="reviews">
-        <h2>Reseñas de los lectores</h2>
-        <div class="review">
-            <h3>Reseña 1</h3>
-            <p>Una reseña escrita por un lector satisfecho.</p>
         </div>
-        <div class="review">
-            <h3>Reseña 2</h3>
-            <p>Otra reseña escrita por otro lector contento con el libro.</p>
-        </div>
-    </div>
-    <a href="/">Volver a la página principal</a>
 
-    <%- include('partials/footer') %>
-    <!-- <script src="ruta_de_tu_js/product_detail.js"></script> -->
+
+
+
+
+
+
+
+        <%- include('partials/footer') %>
+            <!-- <script src="ruta_de_tu_js/product_detail.js"></script> -->
+            <!-- <script src="js/product_detail.js"></script> -->
 </body>
+
 </html>
