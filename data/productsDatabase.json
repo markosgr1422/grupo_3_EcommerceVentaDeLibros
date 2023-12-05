@@ -54,7 +54,7 @@
     "gender": "Biografía",
     "numberPages": 640,
     "price": 17500,
-    "image": "/images/covers/sinceramente.jpg",
+    "image": "/images/covers/sinceramente.png",
     "isbn": 9789878302883,
     "editorial": "Sudamericana",
     "author": "Cristina Fernández de Kirchner"
@@ -118,15 +118,5 @@
     "isbn": 9789877800656,
     "editorial": "Booket",
     "author": "Agatha Christie"
-  },
-  { "id": 1 },
-      { "id": 2 },
-      { "id": 3 },
-      { "id": 4 },
-      { "id": 5 },
-      { "id": 6 },
-      { "id": 7 },
-      { "id": 8 },
-      { "id": 9 },
-      { "id": 10 }
+  }
 ]

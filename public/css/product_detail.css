@@ -135,6 +135,11 @@ ol li {
 
 @media (min-width: 768px) {
     
-
+    .img-book {
+        width: 45%;
+    }
+    .info {
+        width: 50%;
+    }
 
 }
