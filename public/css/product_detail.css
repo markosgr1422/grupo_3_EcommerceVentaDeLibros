@@ -73,7 +73,7 @@
     background-color: #23BFF2;
     outline: none;
     cursor: pointer;
-    color:white;
+    color: white;
     transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -111,10 +111,10 @@
 */
 .description div {
     margin: .5rem 0;
-} 
+}
 
 ol li {
-    
+
     line-height: 1.5rem;
 }
 
@@ -122,22 +122,54 @@ ol li {
     padding-left: .4rem;
 }
 
+.buttons {
+    display: flex;
+    gap: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.action-button {
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.action-button.edit {
+    background-color: orange;
+}
+
+.action-button.delete {
+    background-color: rgb(218, 0, 0);
+}
+
+.buttons a:hover {
+    filter: brightness(.9);
+}
+
+li span {
+    font-weight: bold;
+}
+
 @media (min-width:620px) {
-    .container .flex{
+    .container .flex {
         display: flex;
         gap: 2rem;
     }
-    
+
     .img-book {
         width: 45%;
     }
 }
 
 @media (min-width: 768px) {
-    
+
     .img-book {
         width: 45%;
     }
+
     .info {
         width: 50%;
     }

@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <script src="https://kit.fontawesome.com/848249e791.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles_login.css">
-    <title>Editar producto</title>
+    <title>Editar <%= productToEdit.name %>
+    </title>
 </head>
+
 <body>
     <div class="back-button">
         <a type="link" href="/" id="back-arrow"><i class="fa-solid fa-arrow-left"></i> Inicio </a>
-        </div>
-    <form action="" method="post" class="formulario">
+    </div>
+    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="post" class="formulario">
         <h1>Editar producto</h1>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="titulo" placeholder="Título del libro">
+                <input type="text" name="titulo" placeholder="Título del libro" value="<%= productToEdit.name %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
-                <input type="text" name="autor" placeholder="Autor">
+                <input type="text" name="autor" placeholder="Autor" value="<%= productToEdit.author %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
-                <input type="text" name="editorial" placeholder="Editorial">
+                <input type="text" name="editorial" placeholder="Editorial" value="<%= productToEdit.editorial %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-book-open icon"></i>
-                <input type="number" name="paginas" placeholder="Cantidad de páginas">
+                <input type="number" name="paginas" placeholder="Cantidad de páginas"
+                    value="<%= productToEdit.numberPages %>">
             </div>
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-masks-theater icon"></i>
                 <label for="genero" id="genero">Seleccionar género:</label>
                 <select name="genero" id="genero">
-                    <option value="ficcion">Ficción</option>
-                    <option value="terror">Terror</option>
-                    <option value="autoayuda">Autoayuda</option>
-                    <option value="infantil">Infantiles</option>
-                    <option value="policial">Policial</option>
-                    <option value="historia">Historia</option>
+                    <option value="terror" <%=productToEdit.gender.toLowerCase() =='terror' ? 'selected' : '' %>>Terror</option>
+                    <option value="ficcion" <%=productToEdit.gender.toLowerCase() =='ficcion' ? 'selected' : '' %>>Ficción</option>
+                    <option value="autoayuda" <%=productToEdit.gender.toLowerCase() =='autoayuda' ? 'selected' : '' %>>Autoayuda
+                    </option>
+                    <option value="infantil" <%=productToEdit.gender.toLowerCase() =='infantil' ? 'selected' : '' %>>Infantiles
+                    </option>
+                    <option value="policial" <%=productToEdit.gender.toLowerCase() =='policial' ? 'selected' : '' %>>Policial</option>
+                    <option value="historia" <%=productToEdit.gender.toLowerCase() =='historia' ? 'selected' : '' %>>Historia</option>
                 </select>
             </div>
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-dollar-sign icon"></i>
-                <input type="number" name="precio" placeholder="Precio de venta">
+                <input type="number" name="precio" placeholder="Precio de venta" value="<%= productToEdit.price %>">
             </div>
             <label>Seleccione imagen de portada:</label>
             <div class="input-contenedor">
                 <input type="file" name="portada" accept=".jpg, .png, .jpeg">
             </div>
-            <input type="submit" value="Agregar" class="button">
-            <br>
-            <p><a type="link" href="/create" class="link">Crear nuevo producto</a></p>
+            <input type="submit" value="Editar" class="button">
+            
         </div>
     </form>
 </body>
+
 </html>

@@ -1,5 +1,7 @@
 const path = require('path')
-const {index, findOne} = require('../model/productModel')
+const {index, findOne, deleteProduct} = require('../model/productModel')
+
+
 
 const productController = {
     getProducts: (req, res) => {
@@ -8,8 +10,8 @@ const productController = {
             products
         });
     },
-    getCreate: () => {
-
+    getCreate: (req, res) => {
+        res.render(path.resolve(__dirname, "../views/admin_create"))
     },
     getProductById: (req, res) => {
         const id = req.params.id
@@ -22,14 +24,21 @@ const productController = {
     createProduct: () => {
 
     },
-    getEditProduct: () => {
-
+    getEditProduct: (req, res) => {
+        const id = req.params.id;
+        const productToEdit = findOne(id)
+        res.render(path.resolve(__dirname, "../views/admin_edit"), {
+            productToEdit
+        })
     },
-    editProduct: () => {
-
+    editProduct: (req, res) => {
+        console.log('holis aa')
     },
-    deleteProduct: () => {
-
+    deleteProduct: (req, res) => {
+        const id = req.params.id
+        console.log("holis")
+        deleteProduct(id)
+        res.redirect('/products')
     }
 }
 

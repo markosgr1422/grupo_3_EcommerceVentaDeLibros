@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= product.name + " - " + product.author %></title>
-        <link rel="stylesheet" href="/css/product_detail.css">
-        <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
-    </head>
- 
-    <body>
-        <!-- header Mobil + desktop -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= product.name + " - " + product.author %>
+    </title>
+    <link rel="stylesheet" href="/css/product_detail.css">
+    <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
+</head>
 
-        <%- include('partials/header.ejs') %>
+<body>
+    <!-- header Mobil + desktop -->
 
-            <div class="container flex">
-                <div class="btn-back">
-                    <i class="fa-solid fa-arrow-left"></i>Inicio
+    <%- include('partials/header.ejs') %>
+
+        <div class="container flex">
+            <div class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i>Inicio
+            </div>
+            <div class="img-book">
+                <img src="<%= product.image %>" alt="portada de libro">
+            </div>
+            <div class="info">
+                <h1>
+                    <%= product.name %>
+                </h1>
+<!-- 
+                <p class="book-title-product">
+                </p> -->
+                <p class="book-author"><%= product.author %></p>
+                <p class="book-price">$<%= product.price.toFixed(2) %></p>
+                <div class="btn-quantity">
+                    <button type="button" class="btn-mas"><i class="fa-solid fa-minus"></i></button>
+                    <p class="num-btn">3</p>
+                    <button type="button" class="btn-menos"><i class="fa-solid fa-plus"></i></button>
                 </div>
-                <div class="img-book">
-                    <img src="<%= product.image %>" alt="portada de libro">
-                </div>
-                <div class="info">
-                    <h1>
-                    </h1>
+                <div class="buttons">
+                    <a class="action-button edit" href="/products/<%= product.id %>/edit" class="edit">Editar producto</a>
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="post">
+                        <button class="action-button delete">Eliminar producto</button>
+                    </form>
 
-                    <p class="book-title-product"><%= product.name %></p>
-                    <p class="book-author">Autor</p>
-                    <p class="book-price">$199.99</p>
-                    <div class="btn-quantity">
-                        <button type="button" class="btn-mas"><i class="fa-solid fa-minus"></i></button>
-                        <p class="num-btn">3</p>
-                        <button type="button" class="btn-menos"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-
-                    <button type="submit" class="btn-carrito">Carrito</button>
                 </div>
 
+                <button type="submit" class="btn-carrito">Carrito</button>
             </div>
 
-            <div class="container">
-                <ul class="nav-detail">
-                    <li class="">Descripción</li>
-                    <li class="active">Detalle</li>
-                </ul>
-                <div class="details-container">
-                    <div class="description" id="description">
-                        <div>
-                            <h4>Sinopsis:</h4>
-                            <p><%= product.description %></p>
-                        </div>
-                        <!-- <div>
+        </div>
+
+        <div class="container">
+            <ul class="nav-detail">
+                <li class="">Descripción</li>
+                <li class="active">Detalle</li>
+            </ul>
+            <div class="details-container">
+                <div class="description" id="description">
+                    <div>
+                        <h4>Sinopsis:</h4>
+                        <p>
+                            <%= product.description %>
+                        </p>
+                    </div>
+                    <!-- <div>
                             <h4>Contenido:</h4>
                             <ol>
                                 <li>Prefacio por J.K. Rowling</li>
@@ -65,18 +78,22 @@
 
                             </ol>
                         </div> -->
-                    </div>
-                    <div class="detail" id="detail">
-                        <ol>
-                            <li>Cantidad de Paginas: <%= product.numberPages %></li>
-                            <li>Editorial: <%= product.editorial %></li>
-                            <!-- <li>Año de lanzamiento:</li> -->
-                            <li>ISBN: <%= product.isbn %></li>
-                            <li>Género: <%= product.gender %></li>
-                        </ol>
-                    </div>
+                </div>
+                <div class="detail" id="detail">
+                    <ol>
+                        <li><span>Cantidad de Paginas:</span> <%= product.numberPages %>
+                        </li>
+                        <li><span>Editorial:</span> <%= product.editorial %>
+                        </li>
+                        <!-- <li>Año de lanzamiento:</li> -->
+                        <li><span>ISBN:</span> <%= product.isbn %>
+                        </li>
+                        <li><span>Género:</span> <%= product.gender %>
+                        </li>
+                    </ol>
                 </div>
             </div>
+        </div>
 
 
 
@@ -85,7 +102,7 @@
 
 
 
-            <%- include('partials/footer') %>
-    </body>
+        <%- include('partials/footer') %>
+</body>
 
 </html>
