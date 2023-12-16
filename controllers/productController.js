@@ -1,5 +1,5 @@
 const path = require('path')
-const {index, findOne, deleteProduct} = require('../model/productModel')
+const {index, findOne, deleteProduct, createProduct} = require('../model/productModel')
 
 
 
@@ -11,7 +11,8 @@ const productController = {
         });
     },
     getCreate: (req, res) => {
-        res.render(path.resolve(__dirname, "../views/admin_create"))
+
+        res.render("admin_create")
     },
     getProductById: (req, res) => {
         const id = req.params.id
@@ -21,9 +22,19 @@ const productController = {
         });
 
     },
-    createProduct: () => {
+    // *********create *******
+    createProduct: (req,res) => {
 
+        // llamamos el metodo createProduct
+        console.log("estoy aqui");
+        const product = req.body
+		// aca llamo al metodo del modelo
+		product.image = req.file.filename
+		// luego redirijo
+		createProduct(product)
+		res.redirect("/products")
     },
+
     getEditProduct: (req, res) => {
         const id = req.params.id;
         const productToEdit = findOne(id)
@@ -32,7 +43,7 @@ const productController = {
         })
     },
     editProduct: (req, res) => {
-        console.log('holis aa')
+        console.log('holis aa')   // luciano
     },
     deleteProduct: (req, res) => {
         const id = req.params.id

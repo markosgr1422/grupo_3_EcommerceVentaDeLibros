@@ -7,14 +7,14 @@ const model = {
   findOne: (id) => model.index().find((producto) => producto.id == id),
   createProduct: (product) => {
     // 1. Traer todos los prods
-    const allProducts = model.index();
+    const allProducts = model.index()
     // 2. Crear identificador unico
-    product.id = Date.now();
-
+    product.id = Date.now()
+    
     // 3. pushear el producto nuevo en la lista de productos
-    allProducts.push(product);
+    allProducts.push(product)
     // 4. volver a guardar los productos en el JSON
-    writeFileSync(model.products, JSON.stringify(allProducts));
+    writeFileSync(model.products, JSON.stringify(allProducts, null, 2 ))
   },
   updateProduct: (newProduct, id) => {
     const product = model.findOne(id);
