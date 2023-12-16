@@ -29,7 +29,7 @@ const productController = {
         console.log("estoy aqui");
         const product = req.body
 		// aca llamo al metodo del modelo
-		product.image = req.file.filename
+		product.image = "/images/covers/" + req.file.filename
 		// luego redirijo
 		createProduct(product)
 		res.redirect("/products")

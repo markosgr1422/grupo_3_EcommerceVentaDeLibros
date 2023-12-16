@@ -118,5 +118,25 @@
     "isbn": 9789877800656,
     "editorial": "Booket",
     "author": "Agatha Christie"
+  },
+  {
+    "name": "Exequiel lopez",
+    "author": "marck",
+    "editorial": "el vago",
+    "numberPages": "120000",
+    "gender": "infantil",
+    "price": "2320",
+    "image": "img-1702758156018-berners-Lee.jpg",
+    "id": 1702758156027
+  },
+  {
+    "name": "Luciano",
+    "author": "marck",
+    "editorial": "Sudamericana - cubana",
+    "numberPages": "1211",
+    "gender": "autoayuda",
+    "price": "33332",
+    "image": "/images/covers/img-1702758253678-Alan_Turing.jpg",
+    "id": 1702758253686
   }
 ]

@@ -5,11 +5,11 @@ const multer = require("multer")
 const productController = require('../controllers/productController');
 
 const storage = multer.diskStorage({
-    destination : (req,res,callback)=>{
-        const ruta = path.join(__dirname,"../public/images/nenwBook")
+    destination : (req, file, callback)=>{
+        const ruta = path.join(__dirname,"../public/images/covers/")
         callback(null,ruta)
     },
-    filename:(req,res,callback)=>{
+    filename:(req,file,callback)=>{
         const newFile = createImageName(file)
 
         callback(null,newFile)
@@ -33,7 +33,7 @@ router.get('/:id', productController.getProductById);
 
 // Create
 router.get('/create', productController.getCreate);
-router.post('/',upload.single("images"), productController.createProduct);
+router.post('/',upload.single("image"), productController.createProduct);
 
 
 /*** EDIT ONE PRODUCT ***/
