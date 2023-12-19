@@ -1,26 +1,28 @@
-const path = require ("path")
+
+const {index} = require('../model/productModel')
 
 const controllers = {
     home: (req, res) => {
-        res.render(path.resolve(__dirname, "../views/home.ejs"));
+        const products= index();
+        res.render("home",{products});
     },
     register: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/register.ejs"));
+        res.render("register");
     },
     login: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/login.ejs"));
+        res.render("login");
     },
     carrito: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/carrito.ejs"));
+        res.render("carrito");
     },
     product: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/product_detail.ejs"));
+        res.render("product_detail");
     },
     edit: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/admin_edit.ejs"));
+        res.render("admin_edit");
     },
     create: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/admin_create.ejs"));
+        res.render("admin_create")
     },
 }
 

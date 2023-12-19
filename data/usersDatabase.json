@@ -6,7 +6,8 @@
         "password": "clave123",
         "phone": "+543851234567",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Destacado"
       },
       {
         "id": 2,
@@ -15,7 +16,8 @@
         "password": "contrasena456",
         "phone": "+543852345678",
         "category": "admin",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Ultimas-publicaciones"
       },
       {
         "id": 3,
@@ -24,7 +26,8 @@
         "password": "mi_clave_secreta",
         "phone": "+543853456789",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Destacado"
       },
       {
         "id": 4,
@@ -33,7 +36,8 @@
         "password": "clave123",
         "phone": "+543854567890",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Ultimas-publicaciones"
       },
       {
         "id": 5,
@@ -42,7 +46,8 @@
         "password": "contrasena456",
         "phone": "+543855678901",
         "category": "admin",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Destacado"
       },
       {
         "id": 6,
@@ -51,7 +56,8 @@
         "password": "mi_clave_secreta",
         "phone": "+543856789012",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Ultimas-publicaciones"
       },
       {
         "id": 7,
@@ -60,7 +66,8 @@
         "password": "clave123",
         "phone": "+543857890123",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Ultimas-publicaciones"
       },
       {
         "id": 8,
@@ -69,7 +76,8 @@
         "password": "contrasena456",
         "phone": "+543858901234",
         "category": "admin",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Ultimas-publicaciones"
       },
       {
         "id": 9,
@@ -78,7 +86,8 @@
         "password": "mi_clave_secreta",
         "phone": "+543859012345",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Destacado"
       },
       {
         "id": 10,
@@ -87,7 +96,8 @@
         "password": "clave123",
         "phone": "+543851023456",
         "category": "user",
-        "image": "/images/avatars/default.png"
+        "image": "/images/avatars/default.png",
+        "content":"Destacado"
       },
       { "id": 1 },
       { "id": 2 },
