@@ -1,14 +1,14 @@
 const path = require('path')
-const {index, findOne, deleteProduct, createProduct} = require('../model/productModel')
+const {index, findOne, deleteProduct, createProduct,updateProduct} = require('../model/productModel')
 
 
 
 const productController = {
     getProducts: (req, res) => {
         const products = index()
-        res.render("products"),{
+        res.render("products",{
             products
-        };
+        });
     },
     getCreate: (req, res) => {
         res.render("admin_create")
@@ -32,32 +32,34 @@ const productController = {
 		product.image = "/images/covers/" + req.file.filename
 		// luego redirijo
 		createProduct(product)
-		res.redirect("/products")
+		res.redirect("/products",)
     },
 
     getEditProduct: (req, res) => {
         const id = req.params.id;
         const productToEdit = findOne(id)
-        res.render("admin_edit"), {
+        console.log(productToEdit);
+        res.render("admin_edit", {
             productToEdit
-        }
+        })
     },
-    editProduct: (req, res) => {
 
+    editProduct: (req, res) => {
+        
         console.log('holis aa')   // luciano
         const allProducts = index()
         const id = req.params.id
 
-        if(req.file){
-            return imagen = req.file
-        }
+        // if(req.file){
+        //     return imagen = req.file
+        // }
 
-        const productsUpdate = allProducts.map(producto=>{
-            if(producto.id === id){
-                return producto = req.body
-            }
-            return producto
-        })
+        // const productsUpdate = allProducts.map(producto=>{
+        //     if(producto.id === id){
+        //         return producto = req.body
+        //     }
+        //     return producto
+        // })
     },
     deleteProduct: (req, res) => {
         const id = req.params.id
