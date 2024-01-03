@@ -1,67 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <script src="https://kit.fontawesome.com/848249e791.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles_login.css">
-    <title>Editar <%= productToEdit.name %>
-    </title>
+    <title>Editar producto</title>
 </head>
-
 <body>
     <div class="back-button">
         <a type="link" href="/" id="back-arrow"><i class="fa-solid fa-arrow-left"></i> Inicio </a>
     </div>
-    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="post" class="formulario">
+    <form action="/products/{productId}" method="POST" class="formulario" enctype="multipart/form-data">
+        <!-- Reemplaza {productId} con el ID real del producto que estás editando -->
+
         <h1>Editar producto</h1>
         <div class="contenedor">
+            <!-- Agrega un campo oculto para almacenar el ID del producto -->
+            <input type="hidden" name="product_id" value="{productId}">
+            
+            <!-- Repite la estructura del formulario de agregar productos con los campos prellenados -->
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="titulo" placeholder="Título del libro" value="<%= productToEdit.name %>">
+                <input type="text" name="name" placeholder="Título del libro" value="{nombre_actual_del_producto}">
             </div>
-            <div class="input-contenedor">
-                <i class="fa-solid fa-user-tie icon"></i>
-                <input type="text" name="autor" placeholder="Autor" value="<%= productToEdit.author %>">
-            </div>
-            <div class="input-contenedor">
-                <i class="fa-solid fa-industry icon"></i>
-                <input type="text" name="editorial" placeholder="Editorial" value="<%= productToEdit.editorial %>">
-            </div>
-            <div class="input-contenedor">
-                <i class="fa-solid fa-book-open icon"></i>
-                <input type="number" name="paginas" placeholder="Cantidad de páginas"
-                    value="<%= productToEdit.numberPages %>">
-            </div>
+            <!-- Repite los demás campos del formulario con valores prellenados -->
 
-            <div class="input-contenedor">
-                <i class="fa-solid fa-masks-theater icon"></i>
-                <label for="genero" id="genero">Seleccionar género:</label>
-                <select name="genero" id="genero">
-                    <option value="terror" <%=productToEdit.gender.toLowerCase() =='terror' ? 'selected' : '' %>>Terror</option>
-                    <option value="ficcion" <%=productToEdit.gender.toLowerCase() =='ficcion' ? 'selected' : '' %>>Ficción</option>
-                    <option value="autoayuda" <%=productToEdit.gender.toLowerCase() =='autoayuda' ? 'selected' : '' %>>Autoayuda
-                    </option>
-                    <option value="infantil" <%=productToEdit.gender.toLowerCase() =='infantil' ? 'selected' : '' %>>Infantiles
-                    </option>
-                    <option value="policial" <%=productToEdit.gender.toLowerCase() =='policial' ? 'selected' : '' %>>Policial</option>
-                    <option value="historia" <%=productToEdit.gender.toLowerCase() =='historia' ? 'selected' : '' %>>Historia</option>
-                </select>
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fa-solid fa-dollar-sign icon"></i>
-                <input type="number" name="precio" placeholder="Precio de venta" value="<%= productToEdit.price %>">
-            </div>
-            <label>Seleccione imagen de portada:</label>
-            <div class="input-contenedor">
-                <input type="file" name="portada" accept=".jpg, .png, .jpeg">
-            </div>
-            <input type="submit" value="Editar" class="button">
-            
+            <!-- Añade un botón para actualizar el producto -->
+            <input type="submit" value="Actualizar" class="button">
         </div>
     </form>
 </body>
-
 </html>
