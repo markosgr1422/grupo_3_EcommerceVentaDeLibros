@@ -15,10 +15,12 @@ const controllers = {
     },
     loginProcess: (req, res)=>{
         let userToLogin = User.findByField('email', req.body.email);
-        if (userToLogin) {
-            if (userToLogin.password === req.body.password){
-                return res.render('carrito');
-            }
+        if (userToLogin && userToLogin.password === req.body.password) {
+            req.session.user = {
+                first_name: userToLogin.first_name,
+            };
+            const logedUser = req.session.user;
+            return res.send(`Hola, ${logedUser.first_name}`);
         }
         return res.render('login', {
             errors: {
