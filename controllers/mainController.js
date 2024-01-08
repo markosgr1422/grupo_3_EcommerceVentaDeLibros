@@ -1,5 +1,6 @@
 
-const {index} = require('../model/productModel')
+const {index} = require('../model/productModel');
+const User = require('../model/userModel');
 
 const controllers = {
     home: (req, res) => {
@@ -11,6 +12,21 @@ const controllers = {
     },
     login: (req, res)=>{
         res.render("login");
+    },
+    loginProcess: (req, res)=>{
+        let userToLogin = User.findByField('email', req.body.email);
+        if (userToLogin) {
+            if (userToLogin.password === req.body.password){
+                return res.render('carrito');
+            }
+        }
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Los datos ingresados son inválidos'
+                }
+            }
+        })
     },
     carrito: (req, res)=>{
         res.render("carrito");
