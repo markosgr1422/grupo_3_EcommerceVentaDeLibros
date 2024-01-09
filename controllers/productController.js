@@ -6,19 +6,15 @@ const {index, findOne, deleteProduct, createProduct,updateProduct} = require('..
 const productController = {
     getProducts: (req, res) => {
         const products = index()
-        res.render("products",{
-            products
-        });
+        res.render("products",{products, user:req.session.user || null});
     },
     getCreate: (req, res) => {
-        res.render("admin_create")
+        res.render("admin_create",{user:req.session.user || null})
     },
     getProductById: (req, res) => {
         const id = req.params.id
         const product = findOne(id)
-        res.render("product_detail",{
-            product
-        });
+        res.render("product_detail",{product, user:req.session.user || null});
 
     },
 

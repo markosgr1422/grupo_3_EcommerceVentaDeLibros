@@ -41,9 +41,14 @@
         </div>
       </a>
       <div class="opciones">
-        <a href="/login">
-          <button class="btn">Ingresar</button>
-        </a>
+        <% if (!user) { %>
+          <a href="/login">
+            <button class="btn">Ingresar</button>
+          </a>
+        <% } else {%> <p>
+          Hola, <%= user.first_name %>
+        </p>
+          <% } %>
         
         <a href="/carrito">
           <i class="fa-solid fa-cart-shopping"></i>

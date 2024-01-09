@@ -5,42 +5,19 @@ const User = require('../model/userModel');
 const controllers = {
     home: (req, res) => {
         const products= index();
-        res.render("home",{products});
-    },
-    register: (req, res)=>{
-        res.render("register");
-    },
-    login: (req, res)=>{
-        res.render("login");
-    },
-    loginProcess: (req, res)=>{
-        let userToLogin = User.findByField('email', req.body.email);
-        if (userToLogin && userToLogin.password === req.body.password) {
-            req.session.user = {
-                first_name: userToLogin.first_name,
-            };
-            const logedUser = req.session.user;
-            return res.send(`Hola, ${logedUser.first_name}`);
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Los datos ingresados son inválidos'
-                }
-            }
-        })
+        res.render("home",{products, user:req.session.user || null});
     },
     carrito: (req, res)=>{
-        res.render("carrito");
+        res.render("carrito", {user:req.session.user || null});
     },
     product: (req, res)=>{
-        res.render("product_detail");
+        res.render("product_detail", {user:req.session.user || null});
     },
     edit: (req, res)=>{
-        res.render("admin_edit");
+        res.render("admin_edit", {user:req.session.user || null});
     },
     create: (req, res)=>{
-        res.render("admin_create")
+        res.render("admin_create", {user:req.session.user || null})
     },
 }
 

@@ -1,5 +1,5 @@
 const express = require('express')
-
+const userRouter = require('./routes/userRouter')
 const methodOverride =  require('method-override');
 
 const app = express();
@@ -14,6 +14,7 @@ app.set('view engine','ejs')
 const mainRouter = require('./routes/main')
 const productRouter = require('./routes/productRouter')
 app.use(session( {secret: 'secret'}));
+app.use('/', userRouter)
 app.use('/', mainRouter)
 app.use('/products', productRouter)
 
