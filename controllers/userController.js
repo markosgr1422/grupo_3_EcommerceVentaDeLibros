@@ -13,7 +13,12 @@ const controllers = {
     let userToLogin = User.findByField('email', req.body.email);
     if (userToLogin && userToLogin.password === req.body.password) {
         req.session.user = {
+            id: userToLogin.id,
             first_name: userToLogin.first_name,
+            last_name: userToLogin.last_name,
+            email: userToLogin.email,
+            password: userToLogin.password,
+            category: userToLogin.category
         };
         return res.redirect('/');
     }
