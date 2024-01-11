@@ -12,22 +12,50 @@
         <a type="link" href="/" id="back-arrow"><i class="fa-solid fa-arrow-left"></i> Inicio </a>
     </div>
     <form action="/products/{productId}" method="POST" class="formulario" enctype="multipart/form-data">
-        <!-- Reemplaza {productId} con el ID real del producto que estás editando -->
-
+        
         <h1>Editar producto</h1>
         <div class="contenedor">
-            <!-- Agrega un campo oculto para almacenar el ID del producto -->
-            <input type="hidden" name="product_id" value="{productId}">
-            
-            <!-- Repite la estructura del formulario de agregar productos con los campos prellenados -->
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="name" placeholder="Título del libro" value="{nombre_actual_del_producto}">
+                <input type="text" name="name" placeholder="Título del libro" value="<%= productToEdit.name %>">
             </div>
-            <!-- Repite los demás campos del formulario con valores prellenados -->
+            <div class="input-contenedor">
+                <i class="fa-solid fa-user-tie icon"></i>
+                <input type="text" name="author" placeholder="Autor" value="<%= productToEdit.author %>">
+            </div>
+            <div class="input-contenedor">
+                <i class="fa-solid fa-industry icon"></i>
+                <input type="text" name="editorial" placeholder="Editorial" value="<%= productToEdit.editorial %>">
+            </div>
+            <div class="input-contenedor">
+                <i class="fa-solid fa-book-open icon"></i>
+                <input type="number" name="numberPages" placeholder="Cantidad de páginas" value="<%= productToEdit.numberPages %>">
+            </div>
 
-            <!-- Añade un botón para actualizar el producto -->
-            <input type="submit" value="Actualizar" class="button">
+            <div class="input-contenedor">
+                <i class="fa-solid fa-masks-theater icon"></i>
+                <label for="genero" id="genero">Seleccionar género:</label>
+                <select name="gender" id="gender">
+                    <option value="ficcion">Ficción</option>
+                    <option value="terror">Terror</option>
+                    <option value="autoayuda">Autoayuda</option>
+                    <option value="infantil">Infantiles</option>
+                    <option value="policial">Policial</option>
+                    <option value="historia">Historia</option>
+                </select>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fa-solid fa-dollar-sign icon"></i>
+                <input type="number" name="price" placeholder="Precio de venta" value="<%= productToEdit.price %>">
+            </div>
+            <label>Seleccione imagen de portada:</label>
+            <div class="input-contenedor">
+                <input type="file" name="image" accept=".jpg, .png, .jpeg">
+            </div>
+            <input type="submit" value="Editar" class="button">
+            <br>
+        
         </div>
     </form>
 </body>

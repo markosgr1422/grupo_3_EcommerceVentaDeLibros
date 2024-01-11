@@ -28,7 +28,7 @@ const productController = {
 		product.image = "/images/covers/" + req.file.filename
 		// luego redirijo
 		createProduct(product)
-		res.redirect("/products",)
+		res.redirect("/products")
     },
 
     getEditProduct: (req, res) => {
@@ -42,20 +42,9 @@ const productController = {
 
     editProduct: (req, res) => {
         
-        console.log('holis aa')   // luciano
-        const allProducts = index()
-        const id = req.params.id
+        console.log('holis aa')   // marcos
+     
 
-        // if(req.file){
-        //     return imagen = req.file
-        // }
-
-        // const productsUpdate = allProducts.map(producto=>{
-        //     if(producto.id === id){
-        //         return producto = req.body
-        //     }
-        //     return producto
-        // })
     },
     deleteProduct: (req, res) => {
         const id = req.params.id

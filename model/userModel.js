@@ -22,4 +22,5 @@ const User = {
         return userFound
     },
 }
+
 module.exports = User
