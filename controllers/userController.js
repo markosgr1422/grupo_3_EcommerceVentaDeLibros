@@ -17,7 +17,6 @@ const controllers = {
             first_name: userToLogin.first_name,
             last_name: userToLogin.last_name,
             email: userToLogin.email,
-            password: userToLogin.password,
             category: userToLogin.category
         };
         return res.redirect('/');

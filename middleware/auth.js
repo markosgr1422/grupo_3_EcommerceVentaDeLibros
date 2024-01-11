@@ -1,7 +1,7 @@
 const auth = (req, res, next) => {
   const route = req.route;
   let userAdmin;
-  console.log(route);
+  //console.log(route);
   if (route.path == "/:id/edit" && route.methods.get) {
     userAdmin = isAuthorized(req, res, next);
   }
@@ -10,7 +10,6 @@ const auth = (req, res, next) => {
   }
   if (route.path == '/' && route.methods.post) {
       userAdmin = isAuthorized(req, res, next)
-
   }
   if (route.path == "/:id" && route.methods.delete) {
     userAdmin = isAuthorized(req, res, next);
@@ -27,10 +26,11 @@ const auth = (req, res, next) => {
 
 const isAuthorized = (req, res) => {
   if (req.session.user) {
-    if (req.session.user) {
+    if (req.session.user.category == 'admin') {
       return true;
     }
   }
+  return false
 };
 
 module.exports = {
