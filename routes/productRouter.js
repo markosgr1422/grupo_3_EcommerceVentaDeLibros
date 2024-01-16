@@ -2,26 +2,11 @@ const express = require("express");
 const path = require("path");
 const multer = require("multer");
 
+
 const productController = require("../controllers/productController");
 const { auth } = require("../middleware/auth");
+const { upload } = require("../middleware/authStorage");
 
-const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    const ruta = path.join(__dirname, "../public/images/covers/");
-    callback(null, ruta);
-  },
-  filename: (req, file, callback) => {
-    const newFile = createImageName(file);
-
-    callback(null, newFile);
-  },
-});
-
-function createImageName(file) {
-  return "img-" + Date.now() + "-" + file.originalname;
-}
-
-const upload = multer({ storage });
 
 const router = express.Router();
 

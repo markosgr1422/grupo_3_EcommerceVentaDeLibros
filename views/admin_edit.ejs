@@ -36,13 +36,16 @@
                 <i class="fa-solid fa-masks-theater icon"></i>
                 <label for="genero" id="genero">Seleccionar género:</label>
                 <select name="gender" id="gender">
-                    <option value="ficcion">Ficción</option>
-                    <option value="terror">Terror</option>
-                    <option value="autoayuda">Autoayuda</option>
-                    <option value="infantil">Infantiles</option>
-                    <option value="policial">Policial</option>
-                    <option value="historia">Historia</option>
+                    
+                    <% genders.forEach(gender => { %>
+                        
+                    <option <% if (productToEdit.gender == gender.value) { %>
+                        <%= 'selected' %><% }; %> value="<%= gender.value %>"><%= gender.label %></option>
+                    <% }); %>
                 </select>
+
+             
+
             </div>
 
             <div class="input-contenedor">
@@ -50,9 +53,11 @@
                 <input type="number" name="price" placeholder="Precio de venta" value="<%= productToEdit.price %>">
             </div>
             <label>Seleccione imagen de portada:</label>
+            
             <div class="input-contenedor">
                 <input type="file" name="image" accept=".jpg, .png, .jpeg">
             </div>
+
             <input type="submit" value="Editar" class="button">
             <br>
         

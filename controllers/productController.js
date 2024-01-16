@@ -32,11 +32,22 @@ const productController = {
     },
 
     getEditProduct: (req, res) => {
+        
+       
+        
+        const genders = [ {value:"ficcion", label:"Ficción"},
+        {value:"terror", label:"Terror"},
+        {value:"autoayuda", label:"Autoayuda"},
+        {value:"infantil", label:"Infantil"},
+        {value:"policial", label:"Policial"},
+        {value:"historia", label:"Historia"}] 
+
         const id = req.params.id;
         const productToEdit = findOne(id)
         console.log(productToEdit);
         res.render("admin_edit", {
-            productToEdit
+            productToEdit,
+            genders
         })
     },
 

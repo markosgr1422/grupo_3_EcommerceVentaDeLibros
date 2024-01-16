@@ -136,5 +136,25 @@
     "price": "1300",
     "image": "/images/covers/img-1703200432400-CharlesBabbage.jpg",
     "id": 1703200432405
+  },
+  {
+    "name": "ss",
+    "author": "ssde",
+    "editorial": "Sudamericana - cubana",
+    "numberPages": "2313",
+    "gender": "infantil",
+    "price": "33332",
+    "image": "/images/covers/img-1705018200132-esparragos.png",
+    "id": 1705018200163
+  },
+  {
+    "name": "Luciano",
+    "author": "marck",
+    "editorial": "Sudamericana - cubana",
+    "numberPages": "100",
+    "gender": "autoayuda",
+    "price": "1300",
+    "image": "/images/covers/img-1705433912192-Carpaccio-de-salmon.jpg",
+    "id": 1705433912215
   }
 ]
