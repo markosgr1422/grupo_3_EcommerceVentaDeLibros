@@ -14,32 +14,48 @@
    <div class="back-button">
       <a type="link" href="/" id="back-arrow"><i class="fa-solid fa-arrow-left"></i> Inicio </a>
       </div>
- <form class="formulario">
+ <form class="formulario" method="POST" action="/register" novalidate>
     
     <h1>CREAR USUARIO</h1>
      <div class="contenedor">
      
      <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
-         <input type="text" placeholder="Nombre ">
-         
+         <input type="text" placeholder="Nombre" name="name" id="name" 
+         value="<%= locals.oldData ? oldData.name : null %>">
+         <% if (locals.errors && errors.name){ %>
+            <div class="text-danger"><%= errors.name.msg %></div>
+            <% } %>
       </div>
 
       <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
-         <input type="text"  placeholder="Apellido">
-         
+         <input type="text"  placeholder="Apellido" name="apellido" id="apellido"
+         value="<%= locals.oldData ? oldData.apellido : null %>">
+         <% if (locals.errors && errors.apellido){ %>
+            <div class="text-danger"><%= errors.apellido.msg %></div>
+            <% } %>
       </div>
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
-         <input type="text" placeholder="Correo Electronico">
+         <input type="text" placeholder="Correo Electronico" name="email" id="email"
+         value="<%= locals.oldData ? oldData.email : null %>">
+         <% if (locals.errors && errors.email){ %>
+            <div ><%= errors.email.msg %></div>
+            <% } %>
          
          </div>
          
          <div class="input-contenedor">
             <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Contraseña" name="password" id="password"
+            value="<% locals.oldData && oldData.password ? oldData.password : null %>">
+             
+            <% if (locals.errors && errors.password) { %>
+               <div> <%= errors.password.msg %></div>
+            <% } %>
+            
          </div>
          <div class="input-contenedor">
             <i class="fas fa-key icon"></i>

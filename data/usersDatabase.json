@@ -1,102 +1,116 @@
 [
-  {
-    "id": 1,
-    "first_name": "Martín",
-    "last_name": "González",
-    "email": "martin.gonzalez@example.com",
-    "password": "clave123",
-    "phone": "+543851234567",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 2,
-    "first_name": "Laura",
-    "last_name": "Rodríguez",
-    "email": "laura.rodriguez@example.com",
-    "password": "contrasena456",
-    "phone": "+543852345678",
-    "category": "admin",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 3,
-    "first_name": "Gabriel",
-    "last_name": "López",
-    "email": "gabriel.lopez@example.com",
-    "password": "mi_clave_secreta",
-    "phone": "+543853456789",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 4,
-    "first_name": "María",
-    "last_name": "Fernández",
-    "email": "maria.fernandez@example.com",
-    "password": "clave123",
-    "phone": "+543854567890",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 5,
-    "first_name": "Juan",
-    "last_name": "Torres",
-    "email": "juan.torres@example.com",
-    "password": "contrasena456",
-    "phone": "+543855678901",
-    "category": "admin",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 6,
-    "first_name": "Ana",
-    "last_name": "Pérez",
-    "email": "ana.perez@example.com",
-    "password": "mi_clave_secreta",
-    "phone": "+543856789012",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 7,
-    "first_name": "Miguel",
-    "last_name": "García",
-    "email": "miguel.garcia@example.com",
-    "password": "clave123",
-    "phone": "+543857890123",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 8,
-    "first_name": "Silvia",
-    "last_name": "Ruiz",
-    "email": "silvia.ruiz@example.com",
-    "password": "contrasena456",
-    "phone": "+543858901234",
-    "category": "admin",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 9,
-    "first_name": "Eduardo",
-    "last_name": "Martínez",
-    "email": "eduardo.martinez@example.com",
-    "password": "mi_clave_secreta",
-    "phone": "+543859012345",
-    "category": "user",
-    "image": "/images/users/default.png"
-  },
-  {
-    "id": 10,
-    "first_name": "Carolina",
-    "last_name": "Sánchez",
-    "email": "carolina.sanchez@example.com",
-    "password": "clave123",
-    "phone": "+543851023456",
-    "category": "user",
-    "image": "/images/users/default.png"
-  }
+ {
+  "id": 1,
+  "first_name": "Martín",
+  "last_name": "González",
+  "email": "martin.gonzalez@example.com",
+  "password": "clave123",
+  "phone": "+543851234567",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 2,
+  "first_name": "Laura",
+  "last_name": "Rodríguez",
+  "email": "laura.rodriguez@example.com",
+  "password": "contrasena456",
+  "phone": "+543852345678",
+  "category": "admin",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 3,
+  "first_name": "Gabriel",
+  "last_name": "López",
+  "email": "gabriel.lopez@example.com",
+  "password": "mi_clave_secreta",
+  "phone": "+543853456789",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 4,
+  "first_name": "María",
+  "last_name": "Fernández",
+  "email": "maria.fernandez@example.com",
+  "password": "clave123",
+  "phone": "+543854567890",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 5,
+  "first_name": "Juan",
+  "last_name": "Torres",
+  "email": "juan.torres@example.com",
+  "password": "contrasena456",
+  "phone": "+543855678901",
+  "category": "admin",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 6,
+  "first_name": "Ana",
+  "last_name": "Pérez",
+  "email": "ana.perez@example.com",
+  "password": "mi_clave_secreta",
+  "phone": "+543856789012",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 7,
+  "first_name": "Miguel",
+  "last_name": "García",
+  "email": "miguel.garcia@example.com",
+  "password": "clave123",
+  "phone": "+543857890123",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 8,
+  "first_name": "Silvia",
+  "last_name": "Ruiz",
+  "email": "silvia.ruiz@example.com",
+  "password": "contrasena456",
+  "phone": "+543858901234",
+  "category": "admin",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 9,
+  "first_name": "Eduardo",
+  "last_name": "Martínez",
+  "email": "eduardo.martinez@example.com",
+  "password": "mi_clave_secreta",
+  "phone": "+543859012345",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 10,
+  "first_name": "Carolina",
+  "last_name": "Sánchez",
+  "email": "carolina.sanchez@example.com",
+  "password": "clave123",
+  "phone": "+543851023456",
+  "category": "user",
+  "image": "/images/users/default.png"
+ },
+ {
+  "id": 11,
+  "name": "roman",
+  "apellido": "amado",
+  "email": "roman@gh.com",
+  "password": "$2a$10$z38WQj05owgYgRDZ/rb31.cByK8qIs9ZnK01ZM9yN3iXH6BZNIecK"
+ },
+ {
+  "id": 12,
+  "name": "Luciano",
+  "apellido": "amado",
+  "email": "amado@gh.com",
+  "password": "$2a$10$QDMPVfStW13uUdWk.hK6T.g5NprIUGqRZv/.h3SuEBTgzvklru2F2"
+ }
 ]

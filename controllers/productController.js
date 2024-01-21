@@ -32,9 +32,7 @@ const productController = {
     },
 
     getEditProduct: (req, res) => {
-        
-       
-        
+            
         const genders = [ {value:"ficcion", label:"Ficción"},
         {value:"terror", label:"Terror"},
         {value:"autoayuda", label:"Autoayuda"},
@@ -53,13 +51,12 @@ const productController = {
 
     editProduct: (req, res) => {
         
-        console.log('holis aa')   // marcos
-     
+        console.log('holis')   // marcos 
 
     },
     deleteProduct: (req, res) => {
         const id = req.params.id
-        console.log("holis")
+        
         deleteProduct(id)
         res.redirect('/products')
     }
