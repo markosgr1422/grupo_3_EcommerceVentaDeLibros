@@ -1,5 +1,5 @@
 const path = require('path')
-const {index, findOne, deleteProduct, createProduct,updateProduct} = require('../model/productModel')
+const {index, findOne, deleteProduct, createProduct,updateProduct} = require('../../model/productModel')
 
 
 

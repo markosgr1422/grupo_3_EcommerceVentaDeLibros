@@ -1,6 +1,7 @@
 
-const {index} = require('../model/productModel');
-const User = require('../model/userModel');
+const db = require("../database/models")
+const {index} = require('../../model/productModel');
+const User = require('../../model/userModel');
 
 const controllers = {
     home: (req, res) => {

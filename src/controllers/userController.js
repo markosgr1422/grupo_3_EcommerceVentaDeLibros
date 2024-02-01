@@ -1,9 +1,9 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {index} = require('../model/productModel');
+const {index} = require('../../model/productModel');
 
-const User = require('../model/userModel');
+const User = require('../../model/userModel');
 
 const controllers = {
     register: (req, res)=>{
