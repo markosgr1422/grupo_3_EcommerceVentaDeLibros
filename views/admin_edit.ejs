@@ -11,35 +11,39 @@
     <div class="back-button">
         <a type="link" href="/" id="back-arrow"><i class="fa-solid fa-arrow-left"></i> Inicio </a>
     </div>
-    <form action="/products/{productId}" method="POST" class="formulario" enctype="multipart/form-data">
+    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
         
         <h1>Editar Producto</h1>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="name" placeholder="Título del libro" value="<%= productToEdit.name %>">
+                <input type="text" name="nombre" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
-                <input type="text" name="author" placeholder="Autor" value="<%= productToEdit.author %>">
+                <input type="text" name="autor" placeholder="Autor" value="<%= productToEdit.autor.nombre %>">
             </div>
             <div class="input-contenedor">
+                <i class="fa-solid fa-book icon"></i>
+                <input type="text" name="descripcion" placeholder="Título del libro" value="<%= productToEdit.descripcion %>">
+            </div>
+            <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
                 <input type="text" name="editorial" placeholder="Editorial" value="<%= productToEdit.editorial %>">
-            </div>
-            <div class="input-contenedor">
+            </div> -->
+            <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-book-open icon"></i>
                 <input type="number" name="numberPages" placeholder="Cantidad de páginas" value="<%= productToEdit.numberPages %>">
-            </div>
+            </div> -->
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-masks-theater icon"></i>
                 <label for="genero" id="genero">Seleccionar género:</label>
-                <select name="gender" id="gender">
+                <select name="genero" id="gender">
                     
                     <% genders.forEach(gender => { %>
                         
-                    <option <% if (productToEdit.gender == gender.value) { %>
+                    <option <% if (productToEdit.genero.nombre == gender.value) { %>
                         <%= 'selected' %><% }; %> value="<%= gender.value %>"><%= gender.label %></option>
                     <% }); %>
                 </select>
@@ -50,7 +54,7 @@
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-dollar-sign icon"></i>
-                <input type="number" name="price" placeholder="Precio de venta" value="<%= productToEdit.price %>">
+                <input type="number" name="price" placeholder="Precio de venta" value="<%= productToEdit.precio %>">
             </div>
             <label>Seleccione imagen de portada:</label>
             

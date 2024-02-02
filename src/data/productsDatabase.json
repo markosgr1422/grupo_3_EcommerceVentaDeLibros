@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "titulo": "Cien años de soledad",
+      "descripcion": "La obra maestra de Gabriel García Márquez que narra la historia de la familia Buendía en el ficticio pueblo de Macondo.",
+      "precio": 12000,
+      "portada": "/images/covers/cien_anios_de_soledad.jpg",
+      "id_autor": 9,
+      "id_genero": 2,
+      "stock": 13
+    },
+    {
+      "id": 2,
+      "titulo": "El Aleph",
+      "descripcion": "Una colección de cuentos del reconocido escritor argentino Jorge Luis Borges, que explora temas como la metafísica y los laberintos.",
+      "precio": 9500,
+      "portada": "/images/covers/el_aleph.jpg",
+      "id_autor": 8,
+      "id_genero": 5,
+      "stock": 14
+    },
+    {
+      "id": 3,
+      "titulo": "Holly",
+      "descripcion": "Una novela de Stephen King que lleva a los lectores a través de una emocionante historia de suspenso y terror.",
+      "precio": 8700,
+      "portada": "/images/covers/holly.jpg",
+      "id_autor": 7,
+      "id_genero": 3,
+      "stock": 21
+    },
+    {
+      "id": 4,
+      "titulo": "El fin de la inflación",
+      "descripcion": "Una obra de Javier Milei que aborda el tema económico y propone soluciones para poner fin a la inflación.",
+      "precio": 11500,
+      "portada": "/images/covers/el_fin_de_la_inflacion.jpg",
+      "id_autor": 6,
+      "id_genero": 1,
+      "stock": 19
+    },
+    {
+      "id": 5,
+      "titulo": "Sinceramente",
+      "descripcion": "La autobiografía de Cristina Fernández de Kirchner, expresidenta de Argentina, donde comparte sus experiencias y perspectivas políticas.",
+      "precio": 17500,
+      "portada": "/images/covers/sinceramente.png",
+      "id_autor": 5,
+      "id_genero": 3,
+      "stock": 8
+    },
+    {
+      "id": 6,
+      "titulo": "Matar es Fácil",
+      "descripcion": "Una novela de misterio de Agatha Christie que presenta al detective Hercule Poirot mientras resuelve un intrigante caso de asesinato.",
+      "precio": 9800,
+      "portada": "/images/covers/matar_es_facil.jpg",
+      "id_autor": 2,
+      "id_genero": 1,
+      "stock": 7
+    },
+    {
+      "id": 7,
+      "titulo": "El Alquimista",
+      "descripcion": "La famosa obra de Paulo Coelho que narra la historia de Santiago, un joven pastor andaluz que emprende un viaje en busca de un tesoro.",
+      "precio": 8900,
+      "portada": "/images/covers/el_alquimista.jpg",
+      "id_autor": 4,
+      "id_genero": 2,
+      "stock": 2
+    },
+    {
+      "id": 8,
+      "titulo": "La Divina Comedia",
+      "descripcion": "Una obra clásica de Dante Alighieri que describe su viaje a través del Infierno, el Purgatorio y el Paraíso.",
+      "precio": 15800,
+      "portada": "/images/covers/la_divina_comedia.jpg",
+      "id_autor": 3,
+      "id_genero": 2,
+      "stock": 5
+    },
+    {
+      "id": 9,
+      "titulo": "Sinsajo",
+      "descripcion": "La tercera novela de la trilogía Los juegos del hambre de Suzanne Collins, que sigue la historia de Katniss Everdeen en un mundo distópico.",
+      "precio": 7800,
+      "portada": "/images/covers/sinsajo.jpg",
+      "id_autor": 1,
+      "id_genero": 2,
+      "stock": 23
+    },
+    {
+      "id": 10,
+      "titulo": "Matar es Fácil",
+      "descripcion": "Una novela de misterio de Agatha Christie que presenta al detective Hercule Poirot mientras resuelve un intrigante caso de asesinato.",
+      "precio": 9800,
+      "portada": "/images/covers/matar_es_facil.jpg",
+      "id_autor": 2,
+      "id_genero": 6,
+      "stock": 5
+    }
+  ]
+  

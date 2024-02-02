@@ -3,7 +3,7 @@ const path = require("path");
 const multer = require("multer");
 
 
-const productController = require("../src/controllers/productController");
+const productController = require("../controllers/productController");
 const { auth } = require("../middleware/auth");
 const { upload } = require("../middleware/authStorage");
 

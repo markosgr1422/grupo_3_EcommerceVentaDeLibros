@@ -1,0 +1,110 @@
+[
+ {
+  "id": 1,
+  "nombre": "Martín",
+  "apellido": "González",
+  "email": "martin.gonzalez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 2,
+  "nombre": "Laura",
+  "apellido": "Rodríguez",
+  "email": "laura.rodriguez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 2
+ },
+ {
+  "id": 3,
+  "nombre": "Gabriel",
+  "apellido": "López",
+  "email": "gabriel.lopez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 2
+ },
+ {
+  "id": 4,
+  "nombre": "María",
+  "apellido": "Fernández",
+  "email": "maria.fernandez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 2
+ },
+ {
+  "id": 5,
+  "nombre": "Juan",
+  "apellido": "Torres",
+  "email": "juan.torres@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 6,
+  "nombre": "Ana",
+  "apellido": "Pérez",
+  "email": "ana.perez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 7,
+  "nombre": "Miguel",
+  "apellido": "García",
+  "email": "miguel.garcia@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 8,
+  "nombre": "Silvia",
+  "apellido": "Ruiz",
+  "email": "silvia.ruiz@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 9,
+  "nombre": "Eduardo",
+  "apellido": "Martínez",
+  "email": "eduardo.martinez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 2
+ },
+ {
+  "id": 10,
+  "nombre": "Carolina",
+  "apellido": "Sánchez",
+  "email": "carolina.sanchez@example.com",
+  "password": "$2a$10$XzWWPIg9rffx6AKQodaDeuAEC1ygicwCI54UEE9yyT3q8uUDq1lz2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ },
+ {
+  "id": 11,
+  "nombre": "roman",
+  "apellido": "amado",
+  "email": "roman@gh.com",
+  "password": "$2a$10$z38WQj05owgYgRDZ/rb31.cByK8qIs9ZnK01ZM9yN3iXH6BZNIecK",
+  "avatar": "/images/users/default.png",
+  "id_rol": 2
+ },
+ {
+  "id": 12,
+  "nombre": "Luciano",
+  "apellido": "amado",
+  "email": "amado@gh.com",
+  "password": "$2a$10$QDMPVfStW13uUdWk.hK6T.g5NprIUGqRZv/.h3SuEBTgzvklru2F2",
+  "avatar": "/images/users/default.png",
+  "id_rol": 1
+ }
+]

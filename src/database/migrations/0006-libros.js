@@ -32,6 +32,9 @@ module.exports = {
       descripcion: {
         type: DataTypes.STRING
       },
+      portada: {
+        type: DataTypes.STRING
+      },
       precio: {
         type: DataTypes.INTEGER
       },

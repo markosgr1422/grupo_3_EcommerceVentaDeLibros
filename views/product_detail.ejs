@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= `${product.name} - ${product.author}` %>
+        <%= `${product.titulo} - ${product.autor.nombre}` %>
     </title>
     <link rel="stylesheet" href="/css/product_detail.css">
     <script src="https://kit.fontawesome.com/25a3935e62.js" crossorigin="anonymous"></script>
@@ -21,17 +21,17 @@
                 <i class="fa-solid fa-arrow-left"></i>Inicio
             </div>
             <div class="img-book">
-                <img src="<%= product.image %>" alt="portada de libro">
+                <img src="<%= product.portada %>" alt="portada de libro">
             </div>
             <div class="info">
                 <h1>
-                    <%= product.name %>
+                    <%= product.titulo %>
                 </h1>
 <!-- 
                 <p class="book-title-product">
                 </p> -->
-                <p class="book-author"><%= product.author %></p>
-                <p class="book-price">$<%= product.price %></p>
+                <p class="book-author"><%= product.autor.nombre %></p>
+                <p class="book-price">$<%= product.precio %></p>
                 <div class="btn-quantity">
                     <button type="button" class="btn-mas"><i class="fa-solid fa-minus"></i></button>
                     <p class="num-btn">3</p>
@@ -60,7 +60,7 @@
                     <div>
                         <h4>Sinopsis:</h4>
                         <p>
-                            <%= product.description %>
+                            <%= product.descripcion %>
                         </p>
                     </div>
                     <!-- <div>
@@ -81,14 +81,15 @@
                 </div>
                 <div class="detail" id="detail">
                     <ol>
-                        <li><span>Cantidad de Paginas:</span> <%= product.numberPages %>
+                        <!-- <li><span>Cantidad de Paginas:</span> <%= product.numberPages %>
                         </li>
                         <li><span>Editorial:</span> <%= product.editorial %>
-                        </li>
+                        </li> -->
                         <!-- <li>Año de lanzamiento:</li> -->
-                        <li><span>ISBN:</span> <%= product.isbn %>
-                        </li>
-                        <li><span>Género:</span> <%= product.gender %>
+                        <li><span>Autor:</span> <%= product.autor.nombre %>
+                        </li> 
+                        <li><span>Género:</span> <%= `${product.genero.nombre.charAt(0).toUpperCase() + product.genero.nombre.slice(1).toLowerCase()}` %>
+
                         </li>
                     </ol>
                 </div>

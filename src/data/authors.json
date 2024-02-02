@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Suzanne Collins"
+    },
+    {
+        "id": 2,
+        "nombre": "Agatha Christie"
+    },
+    {
+        "id": 3,
+        "nombre": "Dante Alighieri"
+    },
+    {
+        "id": 4,
+        "nombre": "Paulo Coelho"
+    },
+    {
+        "id": 5,
+        "nombre": "Cristina Fernández de Kirchner"
+    },
+    {
+        "id": 6,
+        "nombre": "Javier Milei"
+    },
+    {
+        "id": 7,
+        "nombre": "Stephen King"
+    },
+    {
+        "id": 8,
+        "nombre": "Jorge Luis Borges"
+    },
+    {
+        "id": 9,
+        "nombre": "Gabriel García Márquez"
+    }
+]

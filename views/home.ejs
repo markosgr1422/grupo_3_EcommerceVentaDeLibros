@@ -14,68 +14,77 @@
   <%- include('partials/header') %>
 
 
-  <main>
-    <div class="carrusel">
-      <div class="contenedor-carrusel">
-        <div class="slide" id="primera-slide">
-          <img src="images/banner1.webp">
-          <div class="flechas">
-            <a href="#tercera-slide"><</a>
-            <a href="#segunda-slide">></a>
+    <main>
+      <div class="carrusel">
+        <div class="contenedor-carrusel">
+          <div class="slide" id="primera-slide">
+            <img src="images/banner1.webp">
+            <div class="flechas">
+              <a href="#tercera-slide">
+                << /a>
+                  <a href="#segunda-slide">></a>
+            </div>
           </div>
-        </div>
-        <div class="slide" id="segunda-slide">
-          <img src="images/banner2.webp">
-          <div class="flechas">
-            <a href="#primera-slide"><</a>
-            <a href="#tercera-slide">></a>
+          <div class="slide" id="segunda-slide">
+            <img src="images/banner2.webp">
+            <div class="flechas">
+              <a href="#primera-slide">
+                << /a>
+                  <a href="#tercera-slide">></a>
+            </div>
           </div>
-        </div>
-        <div class="slide" id="tercera-slide">
-          <img src="images/banner3.jpg">
-          <div class="flechas">
-            <a href="#segunda-slide"><</a>
-            <a href="#primera-slide">></a>
+          <div class="slide" id="tercera-slide">
+            <img src="images/banner3.jpg">
+            <div class="flechas">
+              <a href="#segunda-slide">
+                << /a>
+                  <a href="#primera-slide">></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <h2>Destacados</h2>
-   
-    <section class="destacados">
-       <% products.forEach(product => { %>
-      <article class="card">
-          <a href="/products/<%= product.id %>">
-            <img src="<%= product.image %>">
-            <div class="info-card">
-              <h4><%= product.name %></h4>
-              <p>$<%= product.price %></p>
-              <button class="btn">Añadir al carrito  <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-          </a>
-        </article>
-  <% }) %>
-    </section>
+      <h2>Destacados</h2>
 
-    <h2>Ultimas publicaciones</h2>
-<section class="destacados">
-       <% products.forEach(product => { %>
-      <article class="card">
-          <a href="/products/<%= product.id %>">
-            <img src="<%= product.image %>">
-            <div class="info-card">
-              <h4><%= product.name %></h4>
-              <p>$<%= product.price %></p>
-              <button class="btn">Añadir al carrito  <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-          </a>
-        </article>
-  <% }) %>
-    </section>
+      <section class="destacados">
+        <% products.forEach(product=> { %>
+          <article class="card">
+            <a href="/products/<%= product.id %>">
+              <img src="<%= product.portada %>">
+              <div class="info-card">
+                <h4>
+                  <%= product.titulo %>
+                </h4>
+                <p>$<%= product.precio %>
+                </p>
+                <button class="btn">Añadir al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+              </div>
+            </a>
+          </article>
+          <% }) %>
+      </section>
 
-  </main>
-  <%- include('partials/footer') %>
+      <h2>Ultimas publicaciones</h2>
+      <section class="destacados">
+        <% products.forEach(product=> { %>
+          <article class="card">
+            <a href="/products/<%= product.id %>">
+              <img src="<%= product.portada %>">
+              <div class="info-card">
+                <h4>
+                  <%= product.nombre %>
+                </h4>
+                <p>$<%= product.precio %>
+                </p>
+                <button class="btn">Añadir al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+              </div>
+            </a>
+          </article>
+          <% }) %>
+      </section>
+
+    </main>
+    <%- include('partials/footer') %>
 </body>
 
 </html>

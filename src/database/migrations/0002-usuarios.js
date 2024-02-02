@@ -19,9 +19,21 @@ module.exports = {
       email: {
         type: DataTypes.STRING
       },
-      contraseña: {
+      password: {
         type: DataTypes.STRING
-      }
+      },
+      avatar: {
+        type: DataTypes.STRING
+      },
+      id_rol: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'roles', // Nombre de la tabla a la que hace referencia
+          key: 'id',          // Nombre de la columna a la que hace referencia
+        },
+        
+      },
     });
   },
 

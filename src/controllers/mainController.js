@@ -1,11 +1,14 @@
 
-const db = require("../database/models")
-const {index} = require('../../model/productModel');
-const User = require('../../model/userModel');
+const db = require("../database/models");
+const Libro = require("../database/models/Libro");
+const {index} = require('../model/productModel');
+const User = require('../model/userModel');
 
 const controllers = {
-    home: (req, res) => {
-        const products= index();
+    home: async(req, res) => {
+        // const products= index();
+        const products = await db.Libro.findAll();
+
         res.render("home",{products, user:req.session.user || null});
     },
     carrito: (req, res)=>{

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "autoayuda"
+    },
+    {
+        "id": 2,
+        "nombre": "ficcion"
+    },
+    {
+        "id": 3,
+        "nombre": "terror"
+    },
+    {
+        "id": 4,
+        "nombre": "infantil"
+    },
+    {
+        "id": 5,
+        "nombre": "policial"
+    },
+    {
+        "id": 6,
+        "nombre": "historia"
+    }
+]

@@ -2,7 +2,7 @@ const {body}= require("express-validator")
 
 const authRegister = [
 
-    body("name")
+    body("nombre")
     .notEmpty()
     .withMessage("Debes completar el campo")
     .bail(),

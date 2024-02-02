@@ -13,10 +13,10 @@
         <% products.forEach(product => { %>
             <article class="card">
                 <a href="/products/<%= product.id %>">
-                  <img src="<%= product.image %>">
+                  <img src="<%= product.portada %>">
                   <div class="info-card">
-                    <h4><%= product.name %></h4>
-                    <p>$<%= product.price %></p>
+                    <h4><%= product.titulo %></h4>
+                    <p>$<%= product.precio %></p>
                     <button class="btn">Añadir al carrito  <i class="fa-solid fa-cart-shopping"></i></button>
                   </div>
                 </a>
