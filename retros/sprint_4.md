@@ -1,4 +1,4 @@
-# Cuarto Sprint.
+# Cuarto Sprint: JSON
 
  A continuacion presentamos con el equipo un analisis de este Sprint, donde vimos virtudes como defectos en el desarrollo de esta actividad entre estas buscamos mejorar algunos y buscar mantener o eliminar algunos puntos en la metologia de trabajo de cada uno. Aqui nuestra mirada dejamos plasmado cada detalle con la dinamica de la estrella de mar.
 
