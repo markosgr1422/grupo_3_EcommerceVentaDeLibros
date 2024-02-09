@@ -1,4 +1,4 @@
-# Sexto Sprint
+# Sexto Sprint: Bases de Datos
 
 ## Retrospectiva: 
 
