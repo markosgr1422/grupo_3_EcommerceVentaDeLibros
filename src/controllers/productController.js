@@ -9,6 +9,7 @@ const {
 const {Libro, Genero, Autor} = require("../database/models");
 const { findByPk } = require("../model/userModel");
 const db = require("../database/models");
+const {validationResult} = require('express-validator');
 
 const productController = {
   getProducts: async(req, res) => {
