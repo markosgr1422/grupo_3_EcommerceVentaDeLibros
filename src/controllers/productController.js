@@ -45,20 +45,21 @@ const productController = {
 
   // *********create *******
   createProduct: async (req, res) => {
-    // llamamos el metodo createProduct
-    // console.log("estoy aqui");
-    const product = req.body;
-    const autor = await Autor.findOne({
-      where: {
-        nombre: req.body.autor
-      }
-    })
-    const genero = await Genero.findOne({
-      where: {
-        nombre: req.body.genero
-      }
-    })
     
+    const errors = validationResult(req);
+    // llamamos el metodo createProduct
+    if (errors.isEmpty()) //No hay errores, seguimos adelante
+    { const product = req.body;
+      const autor = await Autor.findOne({
+        where: {
+          nombre: req.body.autor
+        }
+      });
+      const genero = await Genero.findOne({
+        where: {
+          nombre: req.body.genero
+        }
+      });
     if (!autor) {
       const newAutor = await Autor.create({nombre: req.body.autor})
       product.id_autor = newAutor.id
@@ -70,9 +71,13 @@ const productController = {
     product.portada = "/images/covers/" + req.file.filename;
     // luego redirijo
     // createProduct(product);
-    const productCreated = await Libro.create(product)
+    const productCreated = await Libro.create(product);
     res.redirect("/products");
-  },
+  } else {
+    // Hay errores, volvemos al formulario con los mensajes de error
+    res.render('./admin_create', { errors: errors.mapped(), old: req.body });;
+  }
+},
 
   getEditProduct: async (req, res) => {
     const genders = [

@@ -1,27 +1,21 @@
-const {body}= require("express-validator");
-const { validationResult } = require('express-validator');
+const { body, validationResult } = require('express-validator');
 
 const validateProduct = [
-    body('titulo').notEmpty().isLength({ min: 5 }).withMessage('Debe contener 5 caracteres como mínimo').bail(),
-    body('descripcion').isLength({ min: 20 }).withMessage('Debe contener 20 caracteres como mínimo'),
-    body('image').custom((value, { req }) => {
-        if (!value) {
-            return true;
-        }
-        const allowedTypes = ['jpg', 'jpeg', 'gif', 'png'];
-        const extension = value.split('.').pop().toLowerCase();
-        if (!allowedTypes.includes(extension)) {
-            throw new Error('La imagen debe estar en formato jpg, jpeg, gif o png');
-        }
-        return true;
-    })
+    body('titulo').notEmpty().isLength({ min: 5 }).withMessage('Título debe contener 5 caracteres como mínimo').bail(),
+    body('descripcion').isLength({ min: 20 }).withMessage('Descripción debe contener 20 caracteres como mínimo'),
+    // body('image').custom((value) => {
+    //     if (!value) {
+    //         return true;
+    //     }
+    //     const allowedTypes = ['jpg', 'jpeg', 'gif', 'png'];
+    //     const extension = value.split('.').pop().toLowerCase();
+    //     if (!allowedTypes.includes(extension)) 
+    //     {console.log('archivo no válido')
+    //         throw new Error('La imagen debe estar en formato jpg, jpeg, gif o png');
+    //     }
+    //     console.log('archivo válido')
+    //     return true;
+    // })
 ]
-const validate = (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-};
 
-module.exports = validate
+module.exports = validateProduct
