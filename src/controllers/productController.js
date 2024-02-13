@@ -9,11 +9,8 @@ const {
 const { Libro, Genero, Autor } = require("../database/models");
 const { findByPk } = require("../model/userModel");
 const db = require("../database/models");
-<<<<<<< HEAD
 const fs = require("fs");
-=======
 const {validationResult} = require('express-validator');
->>>>>>> 0adadcee3b855ad05d7ef844db55d183af4d1299
 
 const productController = {
   getProducts: async (req, res) => {
@@ -49,25 +46,10 @@ const productController = {
 
   // *********create *******
   createProduct: async (req, res) => {
-<<<<<<< HEAD
-    // llamamos el metodo createProduct
-    // console.log("estoy aqui");
-    const product = req.body;
-    const autor = await Autor.findOne({
-      where: {
-        nombre: req.body.autor,
-      },
-    });
-    const genero = await Genero.findOne({
-      where: {
-        nombre: req.body.genero,
-      },
-    });
-
-=======
     
     const errors = validationResult(req);
-    // llamamos el metodo createProduct
+    
+
     if (errors.isEmpty()) //No hay errores, seguimos adelante
     { const product = req.body;
       const autor = await Autor.findOne({
@@ -80,7 +62,6 @@ const productController = {
           nombre: req.body.genero
         }
       });
->>>>>>> 0adadcee3b855ad05d7ef844db55d183af4d1299
     if (!autor) {
       const newAutor = await Autor.create({ nombre: req.body.autor });
       product.id_autor = newAutor.id;
@@ -172,7 +153,7 @@ const productController = {
     oldProduct.id_genero = genero.id;
     await oldProduct.save()
     
-    console.log(oldProduct)
+    return res.redirect(`/products/${oldProduct.id}`)
     
   },
   deleteProduct: (req, res) => {
