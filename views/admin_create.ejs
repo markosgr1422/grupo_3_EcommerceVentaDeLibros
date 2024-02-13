@@ -16,25 +16,29 @@
         <div class="errores">
             <ul></ul>
         </div>
+        
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="titulo" class="titulo" placeholder="Título del libro" >
+                <input type="text" name="titulo" class="titulo" placeholder="Título del libro" id="titulo">
                 <% if (locals.errors && locals.errors.titulo) { %>
                     <p class="feedback"><%= locals.errors.titulo.msg %></p>
                 <% } %>
             </div>
+            <span id="mensajeTitulo" class="mensaje-error">Título debe tener al menos 5 caracteres</span>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
                 <input type="text" name="autor" placeholder="Autor">
             </div>
+            
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="descripcion" placeholder="Descripcion">
+                <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
                 <% if (locals.errors && locals.errors.descripcion) { %>
                     <p class="feedback"><%= locals.errors.descripcion.msg %></p>
                 <% } %>
             </div>
+            <span id="mensajeDescripcion" class="mensaje-error">Debe tener al menos 20 caracteres</span>
             <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
                 <input type="text" name="editorial" placeholder="Editorial">
@@ -61,13 +65,14 @@
                 <i class="fa-solid fa-dollar-sign icon"></i>
                 <input type="number" name="precio" placeholder="Precio de venta">
             </div>
+            <br>
             <label>Seleccione imagen de portada:</label>
             <div class="input-contenedor">
                 <input type="file" name="image" accept=".jpg, .png, .jpeg">
             </div>
             <input type="submit" value="Agregar" class="button">
             <br>
-            <p><a type="link" href="/edit" class="link">Editar producto de la tienda</a></p>
+            <!--<p><a type="link" href="/edit" class="link">Editar producto de la tienda</a></p>-->
         </div>
     </form>
     <script src="/js/forms.js"></script>
