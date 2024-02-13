@@ -1,9 +1,9 @@
 const express = require("express");
 const userRouter = require("./src/routes/userRouter");
 const methodOverride = require("method-override");
-
 const app = express();
 const bodyParser = require("body-parser");
+
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
@@ -13,6 +13,7 @@ var session = require("express-session");
 app.set("view engine", "ejs");
 const mainRouter = require("./src/routes/main");
 const productRouter = require("./src/routes/productRouter");
+
 app.use(session({ secret: "secret" }));
 app.use("/", userRouter);
 app.use("/", mainRouter);

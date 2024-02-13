@@ -1,6 +1,6 @@
-# Grupo 3: Ecommerce de venta de libros
+# Grupo 3: E-commerce de venta de libros
 
- Plataforma online especializada en venta de libros de todos los géneros, que busca expandir las necesidades y preferencias de nuestro público, para brindarles una mejor experiencia en la lectura con nuestros productos, de muy buena calidad y precio. 
+Plataforma online especializada en venta de libros de todos los géneros, que busca expandir las necesidades y preferencias de nuestro público, para brindarles una mejor experiencia en la lectura con nuestros productos, de muy buena calidad y precio. 
 
  ### Público objetivo:
  Personas que disfrutan de la lectura por placer, estudiantes interesados en el desarrollo académico, profesionales que desean ampliar su campo profesional, y porque no, alguien que busca hacer un regalo original.
@@ -9,10 +9,8 @@
 
 - Luciano Amado: Tengo 30 años, soy de Sgo del estero, la banda. soy vendedor de playa y docente de musica, ahora me encuentro iniciando en el mundo de la programacion de manera autodidactica. 
 - Bruno Gorosito: Tengo 23 años, soy de Sgo del Estero. Estoy estudiando programación en el ITSE y en paralelo aprendo Desarrollo web (back-end y front-end) de forma autodidacta.
-- Luciana Maud: Tengo 21 años, soy de Sgo del Estero. Soy estudiante de Licenciatura en Psicología.
 - Marcos Reyes: tengo 32 años, soy de Sgo del Estero. Soy tecnico en reparacion y armado de pc, administrador de redes y tecnico superior en recursos tecnologico.
 - Roman Ruiz: Tengo 32 años, soy de Santiago del Estero. Contador Público y dueño de comercio. Me estoy iniciando en este mundillo de la programación, buscando potenciar mis habilidades y recursos.
-- Agustin Santillan: Tengo 37 años. Santiagueño. Licenciado en Ciencias Politicas e iniciandose en el mundo de la Programacion!!!
 
 ### Referencia o inspiracion de nuestro producto
 

@@ -13,19 +13,33 @@
         </div>
     <form action="/products/" method="POST" class="formulario" enctype="multipart/form-data">
         <h1>Agregar producto</h1>
+        <div class="errores">
+            <ul></ul>
+        </div>
+        <% if (locals.errors && locals.errors.titulo) { %>
+            <p class="feedback"><%= locals.errors.titulo.msg %></p>
+        <% } %>
+        <% if (locals.errors && locals.errors.descripcion) { %>
+            <p class="feedback"><%= locals.errors.descripcion.msg %></p>
+        <% } %>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="titulo" placeholder="Título del libro" >
+                <input type="text" name="titulo" class="titulo" placeholder="Título del libro" id="titulo">
+                
             </div>
+            <span id="mensajeTitulo" class="mensaje-error">Título debe tener al menos 5 caracteres</span>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
                 <input type="text" name="autor" placeholder="Autor">
             </div>
+            
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="descripcion" placeholder="Descripcion">
+                <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+                
             </div>
+            <span id="mensajeDescripcion" class="mensaje-error">Debe tener al menos 20 caracteres</span>
             <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
                 <input type="text" name="editorial" placeholder="Editorial">
@@ -39,12 +53,12 @@
                 <i class="fa-solid fa-masks-theater icon"></i>
                 <label for="genero" id="genero">Seleccionar género:</label>
                 <select name="genero" id="gender">
-                    <option value="ficcion">Ficción</option>
-                    <option value="terror">Terror</option>
-                    <option value="autoayuda">Autoayuda</option>
-                    <option value="infantil">Infantiles</option>
-                    <option value="policial">Policial</option>
-                    <option value="historia">Historia</option>
+                    <option value="ficcion"> Ficción </option>
+                    <option value="terror"> Terror </option>
+                    <option value="autoayuda"> Autoayuda </option>
+                    <option value="infantil"> Infantiles </option>
+                    <option value="policial"> Policial </option>
+                    <option value="historia"> Historia </option>
                 </select>
             </div>
 
@@ -52,14 +66,16 @@
                 <i class="fa-solid fa-dollar-sign icon"></i>
                 <input type="number" name="precio" placeholder="Precio de venta">
             </div>
+            <br>
             <label>Seleccione imagen de portada:</label>
             <div class="input-contenedor">
                 <input type="file" name="image" accept=".jpg, .png, .jpeg">
             </div>
             <input type="submit" value="Agregar" class="button">
             <br>
-            <p><a type="link" href="/edit" class="link">Editar producto de la tienda</a></p>
+            <!--<p><a type="link" href="/edit" class="link">Editar producto de la tienda</a></p>-->
         </div>
     </form>
+    <script src="/js/forms.js"></script>
 </body>
 </html>

@@ -18,6 +18,9 @@
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
                 <input type="text" name="titulo" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
+                <% if (locals.errors && locals.errors.titulo) { %>
+                    <p class="feedback"><%= locals.errors.titulo.msg %></p>
+                <% } %>
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
@@ -25,7 +28,10 @@
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="descripcion" placeholder="Título del libro" value="<%= productToEdit.descripcion %>">
+                <input type="text" name="descripcion" placeholder="Descripción del libro" value="<%= productToEdit.descripcion %>">
+                <% if (locals.errors && locals.errors.descripcion) { %>
+                    <p class="feedback"><%= locals.errors.descripcion.msg %></p>
+                <% } %>
             </div>
             <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
@@ -69,8 +75,8 @@
             </div>
             <input type="submit" value="Editar" class="button">
             <br>
-        
         </div>
     </form>
+    <script src="/js/forms.js"></script>
 </body>
 </html>
