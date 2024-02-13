@@ -1,7 +1,7 @@
 const { body, validationResult } = require('express-validator');
 
 const validateProduct = [
-    body('titulo').notEmpty().isLength({ min: 5 }).withMessage('Título debe contener 5 caracteres como mínimo').bail(),
+    body('titulo', 'Título debe contener 5 caracteres como mínimo').notEmpty().isLength({ min: 5 }).withMessage(),
     body('descripcion').isLength({ min: 20 }).withMessage('Descripción debe contener 20 caracteres como mínimo'),
     // body('image').custom((value) => {
     //     if (!value) {

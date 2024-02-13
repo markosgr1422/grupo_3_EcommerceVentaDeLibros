@@ -19,7 +19,9 @@ div.errores ul{
     margin-top: 5px;
     justify-content: space-around;
 }
-
+.feedback {
+    color: red;
+}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;

@@ -16,14 +16,17 @@
         <div class="errores">
             <ul></ul>
         </div>
-        
+        <% if (locals.errors && locals.errors.titulo) { %>
+            <p class="feedback"><%= locals.errors.titulo.msg %></p>
+        <% } %>
+        <% if (locals.errors && locals.errors.descripcion) { %>
+            <p class="feedback"><%= locals.errors.descripcion.msg %></p>
+        <% } %>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
                 <input type="text" name="titulo" class="titulo" placeholder="Título del libro" id="titulo">
-                <% if (locals.errors && locals.errors.titulo) { %>
-                    <p class="feedback"><%= locals.errors.titulo.msg %></p>
-                <% } %>
+                
             </div>
             <span id="mensajeTitulo" class="mensaje-error">Título debe tener al menos 5 caracteres</span>
             <div class="input-contenedor">
@@ -34,9 +37,7 @@
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
                 <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
-                <% if (locals.errors && locals.errors.descripcion) { %>
-                    <p class="feedback"><%= locals.errors.descripcion.msg %></p>
-                <% } %>
+                
             </div>
             <span id="mensajeDescripcion" class="mensaje-error">Debe tener al menos 20 caracteres</span>
             <!-- <div class="input-contenedor">
