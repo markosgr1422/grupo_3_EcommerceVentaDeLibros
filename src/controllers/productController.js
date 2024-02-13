@@ -6,12 +6,13 @@ const {
   createProduct,
   updateProduct,
 } = require("../model/productModel");
-const {Libro, Genero, Autor} = require("../database/models");
+const { Libro, Genero, Autor } = require("../database/models");
 const { findByPk } = require("../model/userModel");
 const db = require("../database/models");
+const fs = require("fs");
 
 const productController = {
-  getProducts: async(req, res) => {
+  getProducts: async (req, res) => {
     // const products = index();
     const products = await Libro.findAll();
     // console.log(products)
@@ -20,7 +21,7 @@ const productController = {
   getCreate: (req, res) => {
     res.render("admin_create", { user: req.session.user || null });
   },
-  getProductById: async(req, res) => {
+  getProductById: async (req, res) => {
     const id = req.params.id;
     // const product = findOne(id);
     // const generos = await Genero.findAll()
@@ -28,17 +29,17 @@ const productController = {
       include: [
         {
           model: Genero,
-          as: 'genero',
-          attributes: ['nombre']
+          as: "genero",
+          attributes: ["nombre"],
         },
         {
           model: Autor,
-          as: 'autor',
-          attributes: ['nombre']
-        }
-      ]
+          as: "autor",
+          attributes: ["nombre"],
+        },
+      ],
     });
-    console.log(product)
+    // console.log(product)
     res.render("product_detail", { product, user: req.session.user || null });
   },
 
@@ -49,27 +50,27 @@ const productController = {
     const product = req.body;
     const autor = await Autor.findOne({
       where: {
-        nombre: req.body.autor
-      }
-    })
+        nombre: req.body.autor,
+      },
+    });
     const genero = await Genero.findOne({
       where: {
-        nombre: req.body.genero
-      }
-    })
-    
+        nombre: req.body.genero,
+      },
+    });
+
     if (!autor) {
-      const newAutor = await Autor.create({nombre: req.body.autor})
-      product.id_autor = newAutor.id
+      const newAutor = await Autor.create({ nombre: req.body.autor });
+      product.id_autor = newAutor.id;
     } else {
-      product.id_autor = autor.id
+      product.id_autor = autor.id;
     }
-    product.id_genero = genero.id
+    product.id_genero = genero.id;
     // aca llamo al metodo del modelo
     product.portada = "/images/covers/" + req.file.filename;
     // luego redirijo
     // createProduct(product);
-    const productCreated = await Libro.create(product)
+    const productCreated = await Libro.create(product);
     res.redirect("/products");
   },
 
@@ -89,28 +90,70 @@ const productController = {
       include: [
         {
           model: Genero,
-          as: 'genero'
+          as: "genero",
         },
         {
           model: Autor,
-          as: 'autor'
-        }
-      ]
+          as: "autor",
+        },
+      ],
     });
+    // res.json({productToEdit})
     res.render("admin_edit", {
       productToEdit,
       genders,
     });
   },
 
-  editProduct: (req, res) => {
-    console.log("holis"); // marcos
+  editProduct: async (req, res) => {
+    const data = req.body;
+    let oldProduct = await Libro.findByPk(req.params.id)
+    const autor = await Autor.findOne({
+      where: {
+        nombre: req.body.autor,
+      },
+    });
+    const genero = await Genero.findOne({
+      where: {
+        nombre: req.body.genero,
+      },
+    });
+
+    if (!autor) {
+      const newAutor = await Autor.create({ nombre: req.body.autor });
+      oldProduct.id_autor = newAutor.id;
+    } else {
+      oldProduct.id_autor = autor.id;
+    }
+    if (req.file) {
+      const pathFile = path.join(__dirname + '../../../public' + oldProduct.portada)
+      console.log(pathFile)
+      fs.unlink(pathFile, (err) => {
+        if (err) {
+          console.error('Error al eliminar el archivo:', err);
+        } else {
+          console.log('Archivo eliminado correctamente');
+        }
+      });
+      oldProduct.portada = "/images/covers/" + req.file.filename;
+    } 
+
+    oldProduct.precio = data.precio
+    oldProduct.titulo = data.titulo
+    oldProduct.descripcion = data.descripcion
+    oldProduct.stock = data.stock
+
+    oldProduct.id_genero = genero.id;
+    await oldProduct.save()
+    
+    console.log(oldProduct)
+    
   },
   deleteProduct: (req, res) => {
     const id = req.params.id;
 
     // deleteProduct(id);
-    const  libro = Libro.destroy({ where: { id: id } })
+    const libro = Libro.destroy({ where: { id: id } });
     res.redirect("/products");
   },
 };

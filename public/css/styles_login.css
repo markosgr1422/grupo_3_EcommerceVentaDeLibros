@@ -113,6 +113,18 @@ input:invalid {
     background-color: #f7adad2e;
 }
 
+.portada-padre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.portada {
+    max-height: 300px;
+    width: auto;
+    margin: 0 auto;
+}
+
 .error-message {
     display: none;
     color: red;

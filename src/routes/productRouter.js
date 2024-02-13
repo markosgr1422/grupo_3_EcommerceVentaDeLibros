@@ -19,8 +19,10 @@ router.get("/create", auth, productController.getCreate);
 router.post("/", auth, upload.single("image"), productController.createProduct);
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/:id/edit", auth, productController.getEditProduct);
-router.put("/:id", auth, productController.editProduct);
+router.get("/:id/edit", productController.getEditProduct);
+// router.get("/:id/edit", auth, productController.getEditProduct);
+// router.put("/:id", auth, productController.editProduct);
+router.put("/:id", upload.single('image'), productController.editProduct);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", auth, productController.deleteProduct);

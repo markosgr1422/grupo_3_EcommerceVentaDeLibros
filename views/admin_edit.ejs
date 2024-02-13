@@ -17,7 +17,7 @@
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="nombre" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
+                <input type="text" name="titulo" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
@@ -54,14 +54,19 @@
 
             <div class="input-contenedor">
                 <i class="fa-solid fa-dollar-sign icon"></i>
-                <input type="number" name="price" placeholder="Precio de venta" value="<%= productToEdit.precio %>">
+                <input type="number" name="precio" placeholder="Precio de venta" value="<%= productToEdit.precio %>">
             </div>
             <label>Seleccione imagen de portada:</label>
             
             <div class="input-contenedor">
                 <input type="file" name="image" accept=".jpg, .png, .jpeg">
+                
             </div>
 
+            <p style="text-align: left;">Portada actual:</p>
+            <div class="portada-padre">
+                <img src="<%= productToEdit.portada %>" class="portada">
+            </div>
             <input type="submit" value="Editar" class="button">
             <br>
         
