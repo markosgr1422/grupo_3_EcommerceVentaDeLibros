@@ -22,6 +22,9 @@
         <% if (locals.errors && locals.errors.descripcion) { %>
             <p class="feedback"><%= locals.errors.descripcion.msg %></p>
         <% } %>
+        <% if (locals.errors && locals.errors.image) { %>
+            <p class="feedback"><%= locals.errors.image.msg %></p>
+        <% } %>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>

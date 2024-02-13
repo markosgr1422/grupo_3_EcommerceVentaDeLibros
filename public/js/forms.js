@@ -1,6 +1,5 @@
 window.onload = function(){
     const formulario = document.querySelector(".formulario");
-
     document.getElementById('titulo').addEventListener('input', function() {
         var titulo = this.value;
         var mensajeTitulo = document.getElementById('mensajeTitulo');

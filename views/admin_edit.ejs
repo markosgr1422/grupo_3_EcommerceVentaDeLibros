@@ -14,25 +14,33 @@
     <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="formulario" enctype="multipart/form-data">
         
         <h1>Editar Producto</h1>
+        <div class="errores">
+            <ul></ul>
+        </div>
+        <% if (locals.errors && locals.errors.titulo) { %>
+            <p class="feedback"><%= locals.errors.titulo.msg %></p>
+        <% } %>
+        <% if (locals.errors && locals.errors.descripcion) { %>
+            <p class="feedback"><%= locals.errors.descripcion.msg %></p>
+        <% } %>
+        <% if (locals.errors && locals.errors.image) { %>
+            <p class="feedback"><%= locals.errors.image.msg %></p>
+        <% } %>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="titulo" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
-                <% if (locals.errors && locals.errors.titulo) { %>
-                    <p class="feedback"><%= locals.errors.titulo.msg %></p>
-                <% } %>
+                <input type="text" id="titulo" name="titulo" placeholder="Título del libro" value="<%= productToEdit.titulo %>">
             </div>
+            <span id="mensajeTitulo" class="mensaje-error">Título debe tener al menos 5 caracteres</span>
             <div class="input-contenedor">
                 <i class="fa-solid fa-user-tie icon"></i>
                 <input type="text" name="autor" placeholder="Autor" value="<%= productToEdit.autor.nombre %>">
             </div>
             <div class="input-contenedor">
                 <i class="fa-solid fa-book icon"></i>
-                <input type="text" name="descripcion" placeholder="Descripción del libro" value="<%= productToEdit.descripcion %>">
-                <% if (locals.errors && locals.errors.descripcion) { %>
-                    <p class="feedback"><%= locals.errors.descripcion.msg %></p>
-                <% } %>
+                <input type="text" name="descripcion" id="descripcion" placeholder="Descripción del libro" value="<%= productToEdit.descripcion %>">
             </div>
+            <span id="mensajeDescripcion" class="mensaje-error">Debe tener al menos 20 caracteres</span>
             <!-- <div class="input-contenedor">
                 <i class="fa-solid fa-industry icon"></i>
                 <input type="text" name="editorial" placeholder="Editorial" value="<%= productToEdit.editorial %>">

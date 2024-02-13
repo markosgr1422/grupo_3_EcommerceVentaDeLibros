@@ -22,8 +22,8 @@ router.post("/", upload.single("image"), validateProduct, productController.crea
 /*** EDIT ONE PRODUCT ***/
 // router.get("/:id/edit", auth, productController.getEditProduct);
 router.get("/:id/edit",  productController.getEditProduct);
-router.put("/:id", upload.single('image'), productController.editProduct);
-// router.put("/:id", auth, validateProduct, productController.editProduct);
+//router.put("/:id", upload.single('image'), productController.editProduct);
+router.put("/:id", auth, upload.single('image'), validateProduct, productController.editProduct);
 
 /*** DELETE ONE PRODUCT***/
 router.delete("/:id", auth, productController.deleteProduct);
