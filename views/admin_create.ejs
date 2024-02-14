@@ -16,14 +16,18 @@
         <div class="errores">
             <ul></ul>
         </div>
-        <% if (locals.errors && locals.errors.titulo) { %>
-            <p class="feedback"><%= locals.errors.titulo.msg %></p>
-        <% } %>
-        <% if (locals.errors && locals.errors.descripcion) { %>
-            <p class="feedback"><%= locals.errors.descripcion.msg %></p>
-        <% } %>
-        <% if (locals.errors && locals.errors.image) { %>
-            <p class="feedback"><%= locals.errors.image.msg %></p>
+        <% if (locals.errors) { %>
+            <ul class="feedback-list">
+                <% if (locals.errors.titulo) { %>
+                    <li class="feedback"><%= locals.errors.titulo.msg %></li>
+                <% } %>
+                <% if (locals.errors.descripcion) { %>
+                    <li class="feedback"><%= locals.errors.descripcion.msg %></li>
+                <% } %>
+                <% if (locals.errors.image) { %>
+                    <li class="feedback"><%= locals.errors.image.msg %></li>
+                <% } %>
+            </ul>
         <% } %>
         <div class="contenedor">
             <div class="input-contenedor">

@@ -26,6 +26,7 @@ window.onload = function(){
         let errores = [];
         let campoTitulo = document.querySelector('input[name="titulo"]');
         let campoDescripcion = document.querySelector('input[name="descripcion"]');
+        let campoImage = document.querySelector('input[name="image"]');
         
         if (campoTitulo.value === "") {
             errores.push("Título no debe estar vacío");
@@ -41,7 +42,7 @@ window.onload = function(){
             let ulErrores = document.querySelector("div.errores ul");
             ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += "<li> Error: " + errores[i] + "</li>";
+                ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
             }
         } else {
             formulario.submit();
