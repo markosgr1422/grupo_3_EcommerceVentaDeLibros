@@ -57,6 +57,15 @@ const controllers = {
     res.render("login");
   },
   loginProcess: async (req, res) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("./login", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
+
     // let userToLogin = User.findByField('email', req.body.email);
     let userToLogin = await Usuario.findOne({
       include: {
