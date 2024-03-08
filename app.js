@@ -19,7 +19,7 @@ app.use(session({ secret: "secret" }));
 app.use("/", userRouter);
 app.use("/", mainRouter);
 app.use("/products", productRouter);
-app.use('/api/user', userAPIRouter)
+app.use('/api/users', userAPIRouter)
 
 const PORT = 2000;
 app.listen(PORT, () => {
