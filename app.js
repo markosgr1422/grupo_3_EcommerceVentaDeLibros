@@ -13,13 +13,15 @@ var session = require("express-session");
 app.set("view engine", "ejs");
 const mainRouter = require("./src/routes/main");
 const productRouter = require("./src/routes/productRouter");
+const productAPIRouter = require("./src/routes/api/products");
 const userAPIRouter = require("./src/routes/api/user");
 
 app.use(session({ secret: "secret" }));
 app.use("/", userRouter);
 app.use("/", mainRouter);
 app.use("/products", productRouter);
-app.use('/api/users', userAPIRouter)
+app.use("/api/products", productAPIRouter);
+app.use("/api/users", userAPIRouter);
 
 const PORT = 2000;
 app.listen(PORT, () => {
