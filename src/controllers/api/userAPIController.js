@@ -5,7 +5,7 @@ const userAPIController = {
     'list': (req, res) => {
         Usuario.findAll()
         .then(users => {
-            users = users.map(user => ({...user.dataValues, detail: `/api/user/${user.id}`}))
+            users = users.map(user => ({...user.dataValues, detail: `/api/users/${user.id}`}))
             let respuesta = {
                 meta: {
                     status : 200,
@@ -26,7 +26,7 @@ const userAPIController = {
                     meta: {
                         status: 200,
                         total: user.length,
-                        url: '/api/actor/:id'
+                        url: '/api/users/:id'
                     },
                     data: userWithoutInfo
                 }
