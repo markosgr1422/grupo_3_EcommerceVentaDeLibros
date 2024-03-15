@@ -23,9 +23,7 @@ header.mobile {
     align-items: center;
     overflow: hidden;
     /* min-width: 430px; */
-    
 }
-
 
 
 header.mobile input {
@@ -80,10 +78,6 @@ header.desk {
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
-
-
-
-
 
 
 .top-header {

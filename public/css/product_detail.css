@@ -99,16 +99,7 @@
     background-color: #23bef281;
 }
 
-/* .details-container {
-    min-width: calc(200% + 2rem) !important;
-    display: flex;
-    gap: 2rem;
-}
 
-.description, .detail {
-    width: 50%;
-}
-*/
 .description div {
     margin: .5rem 0;
 }
@@ -125,7 +116,6 @@ ol li {
 .buttons {
     display: flex;
     gap: 1rem;
-    /* margin-bottom: 1rem; */
 }
 
 .action-button {
