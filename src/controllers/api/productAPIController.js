@@ -30,32 +30,47 @@ const productAPIController = {
     },
     
     'detail': async (req, res) => {
-        Libro.findByPk(req.params.id, {
-            include: [Genero, Autor]
-        })
-        .then(libro => {
-            let respuesta = {
+    try {
+        const libro = await Libro.findByPk(req.params.id, {
+            include: [
+                { model: Genero, as: 'genero' },
+                { model: Autor, as: 'autor' }
+            ]
+        });
+
+        if (!libro) {
+            const respuesta = {
                 meta: {
-                    status: 200,
-                    total: libro.length,
-                    url: '/api/products/:id'
-                },
-                data: libro
-            };
-            res.json(respuesta);
-        })
-        .catch(error => {
-            let respuesta = {
-                meta: {
-                    status: 500,
-                    error: "Error al obtener libro",
-                    mensaje: error.message
+                    status: 404,
+                    mensaje: "Libro no encontrado"
                 },
                 data: null
             };
-            res.status(500).json(respuesta);
-        });
-    },
+            return res.status(404).json(respuesta);
+        }
+
+        const respuesta = {
+            meta: {
+                status: 200,
+                total: 1,
+                url: '/api/products/:id'
+            },
+            data: libro
+        };
+        res.json(respuesta);
+    } catch (error) {
+        const respuesta = {
+            meta: {
+                status: 500,
+                error: "Error al obtener libro",
+                mensaje: error.message
+            },
+            data: null
+        };
+        res.status(500).json(respuesta);
+    }
+}
+
     
     
 }
