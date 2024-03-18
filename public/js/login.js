@@ -11,7 +11,7 @@ window.onload = function () {
 
   formulario.email.addEventListener("change", (e) => {
     let email = e.target.value;
-    console.log(!emailRegex.test(email));
+    console.log(emailRegex.test(email));
     if (!emailRegex.test(email)) {
         agregarError("email", "Ingresar un email válido");
     } else {
@@ -37,7 +37,7 @@ window.onload = function () {
         }
       }
     } else {
-    //   formulario.submit();
+      formulario.submit();
     }
   });
 };
