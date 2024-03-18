@@ -2,6 +2,12 @@ const {Libro, Genero, Autor} = require('../../database/models');
 
 const productAPIController = {
     'list': async (req, res) => {
+        const generos = await Genero.findAll({
+            include: 'libros'
+        });
+        const autores = await Autor.findAll({
+            include: 'libros'
+        })
         Libro.findAll()
         .then(libros => {
             libros = libros.map(libro => ({...libro.dataValues, detail: `/api/products/${libro.id}`}))
@@ -9,7 +15,8 @@ const productAPIController = {
                 meta: {
                     status : 200,
                     count: libros.length,
-                    countByCategory: {},
+                    countByCategory: generos.map(genero => {return {nombre: genero.nombre, count: genero.libros.length}}),
+                    countByAuthors: autores.map(autor => {return {nombre: autor.nombre, count: autor.libros.length}}),
                     url: '/api/products'
                 },
                 libros

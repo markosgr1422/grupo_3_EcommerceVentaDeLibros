@@ -9,7 +9,7 @@ function ContentRowTop() {
     const [authorData, setAuthorData] = useState(null);
 
     useEffect(() => {
-        fetch('../../../src/controllers/api/productAPIController')
+        fetch('http://localhost:2000/api/products')
             .then(response => response.json())
             .then(data => {
                 setBookData({
@@ -41,13 +41,13 @@ function ContentRowTop() {
     return (
         <React.Fragment>
             <div className="row">
-                {bookData && genreData && authorData && (
+                {bookData !== null ? (
                     <>
                         <SmallCard {...bookData} />
                         <SmallCard {...genreData} />
                         <SmallCard {...authorData} />
                     </>
-                )}
+                ) : null}
             </div>
         </React.Fragment>
     );

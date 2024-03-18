@@ -3,7 +3,11 @@ const userRouter = require("./src/routes/userRouter");
 const methodOverride = require("method-override");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require('cors')
 
+app.use(cors({
+  origin: '*',
+}))
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));

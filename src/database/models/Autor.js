@@ -19,7 +19,14 @@ module.exports = (sequelize, DataTypes) => {
 
     const Autor = sequelize.define('Autor', cols, options)
 
-   
+    Autor.associate = (models) => {
+      Autor.hasMany(models.Libro, {
+          foreignKey:{
+              name:'id_genero'
+          },
+          as: 'libros'
+      })
+  }
 
 
     return Autor;
