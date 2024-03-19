@@ -7,6 +7,9 @@ import Movie from './Movie';
 import Footer from './Footer';
 import { Route,  Routes } from 'react-router-dom';
 import { TablaProductos } from './TablaProductos';
+import {UltimoProducto} from './UltimoProducto';
+import { Categorias } from './Categorias';
+import { PrincipalContent } from './PrincipalContent';
 function ContentWrapper(){
     return (
         <React.Fragment>
@@ -16,14 +19,11 @@ function ContentWrapper(){
                 <div id="content">
                     <TopBar />
                     <Routes>
-                        <Route path='/' exact element={<TablaProductos />}/>
-
+                        <Route path='/' exact element={<PrincipalContent />}/>
+                        <Route path='/categorias' exact element={<Categorias />}/>
                         <Route path='/productos' element={<TablaProductos />}/>
-                        <Route path='/usuarios' element={<TablaProductos />}/>
-
+                        <Route path='/ultimo' element={<UltimoProducto />}/>
                     </Routes>
-                    <ContentRowTop />
-                    <Movie />
                     <Footer />
                 </div>
             </div>    

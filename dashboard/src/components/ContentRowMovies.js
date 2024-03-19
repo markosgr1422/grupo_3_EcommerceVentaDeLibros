@@ -31,7 +31,7 @@ function ContentRowTop() {
                 setAuthorData({
                     color: 'warning',
                     titulo: 'Autores',
-                    valor: data.meta.count, // Cambia esto según cómo estén estructurados tus datos
+                    valor: Object.keys(data.meta.countByAuthors).length,
                     icono: 'fas fa-user'
                 });
             })

@@ -31,26 +31,26 @@ function SideBar() {
         <hr className="sidebar-divider" />
         {/*<!-- Heading -->*/}
         <div className="sidebar-heading">Actions</div>
-        {/*<!-- Nav Item - Pages -->*/}
+        {/*<!-- Nav Item - Categorias -->*/}
         <li className="nav-item">
-          <a className="nav-link collapsed" href="/">
+          <Link className="nav-link collapsed" to="/categorias">
             <i className="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
+            <span>Categorias</span>
+          </Link>
         </li>
-        {/*<!-- Nav Item - Charts -->*/}
+        {/*<!-- Nav Item - Productos -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/productos">
             <i className="fas fa-fw fa-chart-area"></i>
             <span>Productos</span>
           </Link>
         </li>
-        L{/*<!-- Nav Item - Tables -->*/}
+        {/*<!-- Nav Item - Ultimo creado -->*/}
         <li className="nav-item">
-          <a className="nav-link" href="/">
+          <Link className="nav-link" to="/ultimo">
             <i className="fas fa-fw fa-table"></i>
-            <span>Tables</span>
-          </a>
+            <span>Ultimo Creado</span>
+          </Link>
         </li>
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider d-none d-md-block" />
