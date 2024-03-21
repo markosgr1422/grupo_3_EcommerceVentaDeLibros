@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <div class="container perfil">
+            <img src="<%= user.avatar %>" class="rounded"/>
+            <div class="info">
+                <h2><%= user.nombre + " "+ user.apellido %></h2>
+                <p><%= user.email %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

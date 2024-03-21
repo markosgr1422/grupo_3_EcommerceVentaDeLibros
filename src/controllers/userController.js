@@ -10,7 +10,7 @@ const controllers = {
   register: (req, res) => {
     res.render("register");
   },
-  userRegister: async(req, res) => {
+  userRegister: async (req, res) => {
     console.log(bcryptjs.hashSync(req.body.password, 10));
     const resultValidation = validationResult(req);
 
@@ -22,9 +22,9 @@ const controllers = {
     }
     // let userInDB = User.findByField("email", req.body.email);
     let userInDB = await Usuario.findOne({
-        where: {
-            email: req.body.email
-        }
+      where: {
+        email: req.body.email,
+      },
     });
 
     if (userInDB) {
@@ -45,19 +45,17 @@ const controllers = {
       password: bcryptjs.hashSync(req.body.password, 10),
     };
 
-
     // let userCreated = User.create(userToCreate);
-    const userCreated = await Usuario.create(userToCreate)
-    const {password, ...userWithoutPass} = userCreated.dataValues
-    req.session.user = userWithoutPass
-    console.log(req.session.user, userWithoutPass)
+    const userCreated = await Usuario.create(userToCreate);
+    const { password, ...userWithoutPass } = userCreated.dataValues;
+    req.session.user = userWithoutPass;
+    console.log(req.session.user, userWithoutPass);
     return res.redirect("/");
   },
   login: (req, res) => {
     res.render("login");
   },
   loginProcess: async (req, res) => {
-
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.render("./login", {
@@ -92,7 +90,7 @@ const controllers = {
       const { password, ...userWithoutPass } = userToLogin.dataValues;
       console.log(userToLogin.dataValues);
       req.session.user = userWithoutPass;
-      return res.redirect("/");
+      return res.redirect("/perfil");
     }
     return res.render("login", {
       errors: {
@@ -102,10 +100,19 @@ const controllers = {
       },
     });
   },
-  logout: async(req, res) => {
+  logout: async (req, res) => {
     delete req.session.user;
     res.redirect("/login");
-  }
+  },
+  perfil: async (req, res) => {
+    console.log(req.session.user);
+    if (req.session.user == undefined) {
+      return res.redirect("/");
+    } else {
+      console.log(req.session.user)
+      res.render("perfil_user", { user: req.session.user });
+    }
+  },
 };
 
 module.exports = controllers;
