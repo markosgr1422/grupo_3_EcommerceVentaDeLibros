@@ -7,32 +7,6 @@ window.onload = function () {
 
   let ulErrores = document.querySelector(".errores");
 
-  formulario.nombre.addEventListener("change", (e) => {
-    let nombre = e.target.value.trim();
-    if (nombre === "") {
-      agregarError("nombre", "Debe ingresar un nombre");
-    } else {
-      removerError('nombre');
-    }
-  });
-
-  formulario.apellido.addEventListener("change", (e) => {
-    let apellido = e.target.value.trim();
-    if (apellido === "") {
-      agregarError("apellido", "Debe ingresar un apellido");
-    } else {
-      removerError('apellido');
-    }
-  });
-
-  formulario.email.addEventListener("change", (e) => {
-    let email = e.target.value.trim();
-    if (!emailRegex.test(email)) {
-      agregarError("email", "Ingresar un email válido");
-    } else {
-      removerError('email')
-    }
-  });
 
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -43,7 +17,27 @@ window.onload = function () {
     } else {
       removerError("password");
     }
-  
+    
+      let email = formulario.email.value.trim();
+      if (!emailRegex.test(email)) {
+        agregarError("email", "Ingresar un email válido");
+      } else {
+        removerError('email')
+      };
+
+      let apellido = formulario.apellido.value.trim();
+      if (apellido === "") {
+        agregarError("apellido", "Debe ingresar un apellido");
+      } else {
+        removerError('apellido');
+      };
+    
+      let nombre = formulario.nombre.value.trim();
+      if (nombre === "") {
+        agregarError("nombre", "Debe ingresar un nombre");
+      } else {
+        removerError('nombre');
+      };
     if (errores.length > 0) {
       for (let i = 0; i < errores.length; i++) {
         if (!document.getElementById(errores[i].name + "Error")) {
