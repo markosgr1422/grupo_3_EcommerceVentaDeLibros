@@ -1,68 +1,70 @@
 <head>
-<link rel="stylesheet" href="/css/home.css">
-<script src="https://kit.fontawesome.com/848249e791.js" crossorigin="anonymous"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="stylesheet" href="/css/home.css" />
+  <script
+    src="https://kit.fontawesome.com/848249e791.js"
+    crossorigin="anonymous"
+  ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <header class="mobile">
-    
-    <a href="/"><img class="img-logo mobile" src="/images/logo.png" alt=""></a>
-    <div class="input-group">
-      <input type="text">
-        <button class="btn-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      
+  <a href="/"><img class="img-logo mobile" src="/images/logo.png" alt="" /></a>
+  <div class="input-group">
+    <input type="text" />
+    <button class="btn-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+  <a href="/carrito">
+    <i class="fa-solid fa-cart-shopping"></i>
+  </a>
+  <div class="menu-icon">
+    <i class="fa-solid fa-bars"></i>
+    <div>
+      <ul>
+        <li></li>
+      </ul>
     </div>
-    <a href="/carrito">
-      <i class="fa-solid fa-cart-shopping"></i>
+  </div>
+</header>
+
+<header class="desk">
+  <div class="top-header">
+    <form action="">
+      <input type="text" placeholder="Buscar" />
+      <button class="btn-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+    <a href="/">
+      <div class="logo">
+        <img src="/images/logo.png" alt="" />
+        <h1>Libres Libros</h1>
+      </div>
     </a>
-    <div class="menu-icon">
-      <i class="fa-solid fa-bars"></i>
-      <div>
-        <ul>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <header class="desk">
-    <div class="top-header">
-      <form action="">
-        <input type="text" placeholder="Buscar">
-        <button class="btn-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-
-      <a href="/">
-        <div class="logo">
-          <img src="/images/logo.png" alt="">
-          <h1>Libres Libros</h1>
-        </div>
+    <div class="opciones">
+      <% if (!user) { %>
+      <a href="/login">
+        <button class="btn">Ingresar</button>
       </a>
-      <div class="opciones">
-        <% if (!user) { %>
-          <a href="/login">
-            <button class="btn">Ingresar</button>
-          </a>
-        <% } else {%> <p class="btn">
-          Hola, <%= user.nombre %>
-        </p>
-          <% } %>
-        
-        <a href="/carrito">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-      </div>
+      <% } else {%>
+      <p class="btn">Hola, <%= user.nombre %></p>
+      <a href="/logout">
+        <button class="btn white">Cerrar sesion</button>
+      </a>
+      <% } %>
+
+      <a href="/carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
     </div>
-    <nav class="navbar">
-      <a href="/products">Libros</a>
-      <a href="/products/create">Vender</a>
-      <a class="item-select">Géneros</a>
-      <a>Autores</a>
-      <a>Novedades</a>
-      <a>Contacto</a> 
-    </nav>
-  </header>
+  </div>
+  <nav class="navbar">
+    <a href="/products">Libros</a>
+    <a href="/products/create">Vender</a>
+    <a class="item-select">Géneros</a>
+    <a>Autores</a>
+    <a>Novedades</a>
+    <a>Contacto</a>
+  </nav>
+</header>

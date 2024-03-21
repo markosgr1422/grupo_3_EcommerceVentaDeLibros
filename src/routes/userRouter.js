@@ -14,4 +14,7 @@ router.post('/login', validateLogin, controllers.loginProcess);
 router.get('/register', controllers.register);
 router.post('/register',authRegister,controllers.userRegister)
 
+//ruta logout
+router.get('/logout', controllers.logout);
+
 module.exports = router;

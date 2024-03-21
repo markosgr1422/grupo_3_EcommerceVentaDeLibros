@@ -65,6 +65,15 @@ a .fa-solid {
     color: white;
 }
 
+.btn.white {
+    background-color: #fff;
+    color: black;
+}
+
+.btn.white:hover {
+
+    color: white;
+}
 
 .logo {
     color: black;
